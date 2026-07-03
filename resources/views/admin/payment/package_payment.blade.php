@@ -69,7 +69,7 @@
 								<option value="">--select--</option>
 								@if(!empty($crs))
 									@foreach($crs as $r)
-										<option value="{{$r->id}}" @if ($r->id==Session::get('mcq_course_id')) {!! "selected" !!} @endif>{{ $r->course_name }}</option>
+										<option value="{{$r->unique_id}}" @if ($r->id==Session::get('mcq_course_id')) {!! "selected" !!} @endif>{{ $r->course_name }}</option>
 									@endforeach
 								@endif
 								</select>
@@ -86,23 +86,23 @@
 								@endfor
 								</select>
 							</div>
-							
+
+							<div class="col-lg-3 col-xl-3 col-xxl-3">
+							<label style="padding-top:9px;">Select Date</label>
+
+								<div class="input-group pull-right" id="kt_daterangepicker_6">
+										<input type="text" id="date_range" class="form-control" readonly="" placeholder="Select date range">
+										<div class="input-group-append">
+											<span class="input-group-text"><i class="la la-calendar-check-o"></i></span>
+										</div>
+								</div>
+							</div>
 							<div class="col-lg-2 col-xl-2 col-xxl-2">
 							<label class="col-lg-12 col-xl-12 col-xxl-12" style="padding-top:8px;">&nbsp;</label>
-							   <button type="button" id="btnGet" class="btn btn-primary">Get</button>
+							   <button type="button" id="btnGet" class="btn btn-primary">Get</button>&nbsp;&nbsp;
+							   <button type="button" id="btnAll" class="btn btn-primary" >All</button>
 							</div>
-							
-							<div class="col-lg-4 col-xl-4 col-xxl-4">
-							<label style="padding-top:9px;">Select Date</label>
-							   <input type="hidden" id="date_range" name="date_range" value='' >
-							   <input class="form-control input-daterange-datepicker" type="text" id="daterange" name="daterange" >
-							</div>
-							
-							<div class="col-lg-1 col-xl-1 col-xxl-1">
-							<label class="col-lg-12 col-xl-12 col-xxl-12" style="padding-top:8px;">&nbsp;</label>
-							<button type="button" id="btnAll" class="btn btn-primary" >All</button>
-							</div>
-								  
+	  
 							</div>
 							
 						</div>
@@ -211,9 +211,12 @@ $(document).ready(function()
 			data: function (data) 
 		    {
 				data.search = $('input[type="search"]').val();
-				data.flt_course = $("#flt_course").val();
+				data.flt_course = $("#flt_course_id").val();
 				data.flt_year = $("#flt_year").val();
-				data.dateRange = $("#date_range").val();
+
+				var dt=$("#date_range").val();
+				var res = dt.replaceAll("/", "-");
+				data.dateRange = res;
 		    },
 		},
 		
@@ -243,11 +246,12 @@ $(document).ready(function()
     });
 
 
-$("#daterange").change(function()
+$("#date_range").change(function()
 {
-	$("#date_range").val($(this).val());
+	//$("#date_range").val($(this).val());
 	table.draw();
 });
+
  
 $("#btnGet").click(function()
 {
@@ -257,7 +261,7 @@ $("#btnGet").click(function()
 $("#btnAll").click(function()
 {
 	$("#date_range").val('');
-	$("#flt_course").val('');
+	$("#flt_course_id").val('');
 	$("#flt_year").val('');
 	table.draw();
 });

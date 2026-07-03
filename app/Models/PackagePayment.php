@@ -50,14 +50,18 @@ class PackagePayment extends Model
 		$search=$request->search;
 		$course=$request->flt_course;
 		$year=$request->flt_year;
-		$drange=explode('-',$request->dateRange);
+		$drange=$request->dateRange;
+	
+		$from="";$to="";
 		
-		$dt1="";$dt2="";
-		
-		if(count($drange)>1)
+		if($drange!="")
 		{
-		$dt1=date_create($drange[0])->format('Y-m-d');
-		$dt2=date_create($drange[1])->format('Y-m-d');
+			$dt=explode("-",$drange);
+			if(count($dt)==6)
+			{
+				$from=trim($dt[2])."-".trim($dt[0])."-".trim($dt[1]);
+				$to=trim($dt[5])."-".trim($dt[3])."-".trim($dt[4]);
+			}
 		}
 
 		
@@ -80,13 +84,17 @@ class PackagePayment extends Model
 		{
 			$dts->where('package_payments.course_unique_id',$course)->whereYear('package_payments.created_at',$year);
 		}
+		else if($course!=""  and $year=="")
+		{
+			$dts->where('package_payments.course_unique_id',$course);
+		}
 		else if($course==""  and $year!="")
 		{
 			$dts->whereYear('package_payments.created_at',$year);
 		}
-		else if($dt1!="" and $dt2!="")
+		else if($from!="" and $to!="")
 		{
-			$dts->whereBetween('package_payments.created_at',[$dt1,$dt2]);
+			$dts->whereBetween('package_payments.created_at',[$from,$to]);
 		}
 		
 		$dats=$dts->orderBy('package_payments.id','ASC')->get();
