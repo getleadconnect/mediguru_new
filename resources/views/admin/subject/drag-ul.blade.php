@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>jQuery UI Sortable - Default functionality</title>
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="/resources/demos/style.css">
+  <style>
+  #sortable { list-style-type: none; margin: 0; padding: 0; width: 60%; }
+  #sortable li { margin: 0 3px 3px 3px; padding: 0.4em; padding-left: 1.5em; font-size: 1.4em; height: 18px; }
+  #sortable li span { position: absolute; margin-left: -1.3em; }
+  </style>
+  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+  <script>
+  $( function() {
+    $( "#sortable" ).sortable();
+  } );
+  </script>
+</head>
+<body>
+ 
+<ul id="sortable">
+  <li class="ui-state-default" data-id="1" ><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Item 1</li>
+  <li class="ui-state-default" data-id="2"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Item 2</li>
+  <li class="ui-state-default" data-id="3"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Item 3</li>
+  <li class="ui-state-default" data-id="4"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Item 4</li>
+  <li class="ui-state-default" data-id="5"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Item 5</li>
+  <li class="ui-state-default" data-id="6"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Item 6</li>
+  <li class="ui-state-default" data-id="7"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Item 7</li>
+</ul>
+
+<button id="btn1">CLICK</button>
+
+<script>
+
+var phrases ="";
+$("#btn1").click(function()
+{
+	phrases ="";
+	$('#sortable').each(function(){
+		$(this).find('li').each(function(){
+			var current = $(this).attr('data-id');
+			phrases+=","+current;
+		});
+	});
+	var ids=phrases.substr(1);
+	alert(ids);
+
+});
+</script>
+ 
+ 
+</body>
+</html>
+

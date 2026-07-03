@@ -1,0 +1,2796 @@
+{
+	"info": {
+		"_postman_id": "d983a8e6-8562-4879-8b1d-440ef9620d26",
+		"name": "mediguru_new",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "3567875"
+	},
+	"item": [
+		{
+			"name": "http://127.0.0.1:8000/api/login",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIzIiwianRpIjoiZWE1OWM1ODI1MDM0Yjc1N2QxOWIwNWI1YWNkYTBkNjdjOGQ0ODM4YmQ5ZGUwZDlmOTdmYTE3Nzc5ZjI4OGFjYzcwYWNiMzhhZDQ5YzY2YmMiLCJpYXQiOjE2NjgzOTkxNDQuMjQ4MzQ0LCJuYmYiOjE2NjgzOTkxNDQuMjQ4MzQ3LCJleHAiOjE2OTk5MzUxNDQuMjQzMDY3LCJzdWIiOiIxNiIsInNjb3BlcyI6W119.E9INzxmjXNwtHRho9-rESBl5sWJ1rKGHKZ5jAq7BdtCFX7VYbi-G0y80SiaySkg-9kwk8uja5Zb1YQSG3ITEnvYDBhP9xwDVDu03q6BfHZigRToVEB9Ttbs9vagpQAmPETrPFGb5UnEQxD4aFTdnEqxYJ3jPM5EMhtw4PtPzSk7B5iswpIpVMTkHTFds_w7D0oK2pmLxy3fmCEKK-ou9novn3EOslQDtnLeY_a-yB4tdw5rnV33wcLejOIY_UpC0OnUbguQsmPOQXRmdm0XaA0pz17gYSa5FYcgK2bsyJzbw4TuYjTenh7GX98FawhEFSCBYpz-2GO0vv4mcnrbMY59KofaI6T6EOl3RWApflJO8iRjr0CrpT_vVIP_5fmSuQLZ04-sLVJgQ_8bNP1-8F59Y2QX3cQD2JrFzq-UBfD219GOJGSqTWNREjNxBjd5GSp4mv5hZ8Q5T0S3txcQhYkNjJ_CzT470s624UlxPyn78J9eDQPEk7wdClEKCqAOSN6tpv6C1qBGYERa17ufDHxrq6DrUXapbTMubpAaQucPLQ0SyXhw7pDLjnT3yUZAda13xmDh-DjmOZrITH4lC-IyfXYVm-m4OriE2_J3j9wYrGC5ax9W_Canu38mIksi3OcV_Ind3roqaqNu83l_yV1V7Th7mWXKxMjJvlUP0fig",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "mobile",
+							"value": "1122334455",
+							"type": "default"
+						},
+						{
+							"key": "password",
+							"value": "1234567",
+							"type": "default"
+						},
+						{
+							"key": "version_release",
+							"value": "11",
+							"type": "default"
+						},
+						{
+							"key": "manufacturer",
+							"value": "samsung",
+							"type": "default"
+						},
+						{
+							"key": "model",
+							"value": "a30",
+							"type": "default"
+						},
+						{
+							"key": "androidid",
+							"value": "android12233",
+							"type": "default"
+						},
+						{
+							"key": "brand",
+							"value": "samsung",
+							"type": "default"
+						},
+						{
+							"key": "device",
+							"value": "a30",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/v2/login",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v2",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/api/register_student",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "shaji -1",
+							"type": "text"
+						},
+						{
+							"key": "gender",
+							"value": "MALE",
+							"type": "text"
+						},
+						{
+							"key": "birth_date",
+							"value": "20-10-2020",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "sp@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "mobile",
+							"value": "9995338385",
+							"type": "text"
+						},
+						{
+							"key": "state",
+							"value": "kerala",
+							"type": "text"
+						},
+						{
+							"key": "student_image",
+							"type": "file",
+							"src": "/C:/Users/Administrator/Pictures/dummy_user.png"
+						},
+						{
+							"key": "password",
+							"value": "12345678",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/register_student",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"register_student"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/api/get_profile",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIzIiwianRpIjoiNWVkNWZjMjY5ZmEyODNhMmRjMGFlMTIwZjk5MzhhNzM2MzVjNDE3OGMxODZlNWYxMmZjMDY0Y2IzZGIzODk0N2JkNjViNTU5MDI4ODJjMzEiLCJpYXQiOjE2NTg0NzI2NDguMTg4MTU0LCJuYmYiOjE2NTg0NzI2NDguMTg4MTY1LCJleHAiOjE2OTAwMDg2NDguMDc3MjE3LCJzdWIiOiI0MiIsInNjb3BlcyI6W119.qDumqXtoGfbthOu57fIdKCzsiEaCGlzyHS4bWcVKZBFl2o16Xwuo3Z3R6Lyc0zio17PIMY5LDYfGVHnA8YoZWmWEwvXVmpHC-zlxHmNQrGbAK-IjQdukTyxpKqhkBynfBC0edflh1JJWu3AaSVcZVMjwxW9_wLZCIIDfuS6hNGXt0BsVOF4MUKqXbcwWGEW_PjuJyJbWrlzXWyPWsO1iT-8o6iHVJwBDVkPeRY4jQndN54f1GxNjyDx_YqUpvUgHPIGdJLicguQnQP03QXBov1ucK2QDVZFUu7fKAo1WaHLk0Avsg-sNNYhbJ4c83EhHtD2SwqAxoAfFg8gxUsyJDG8v6O5_RSqNVr-SQsdX_0wzGznmGNOvRCJ4_EQzH1IWCnHdxdDD0JaTZuTK35OkpMjXeOUE_ywBJ7qJ1gxNOX4c4Hus82Up6oGzGdBwZktZ-1MwrofYpAP9sbuiAZQmns0qwF2XzcHaNYBndCG0iJGMmZs6KJSv42LSyEseE-nRU8hPCo-iGpkEX1Xfc3g1Z4S_atlhZvlpY7XSZAqZkk6vZLGeZQSNJQ2xPegdD3zDkrzIWVQBRaDhb9bKnV0ZyJpTNtp-ehbjqDLuBERfxdQLF1PF_fozBSQK9bLUzyW5atuKL4cDWdh5f6iyysYAO7JnXWCBFWm4p8kp1WvbYTY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "student_id",
+							"value": "55",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/get_profile",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"get_profile"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/api/update_profile",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIzIiwianRpIjoiNWVkNWZjMjY5ZmEyODNhMmRjMGFlMTIwZjk5MzhhNzM2MzVjNDE3OGMxODZlNWYxMmZjMDY0Y2IzZGIzODk0N2JkNjViNTU5MDI4ODJjMzEiLCJpYXQiOjE2NTg0NzI2NDguMTg4MTU0LCJuYmYiOjE2NTg0NzI2NDguMTg4MTY1LCJleHAiOjE2OTAwMDg2NDguMDc3MjE3LCJzdWIiOiI0MiIsInNjb3BlcyI6W119.qDumqXtoGfbthOu57fIdKCzsiEaCGlzyHS4bWcVKZBFl2o16Xwuo3Z3R6Lyc0zio17PIMY5LDYfGVHnA8YoZWmWEwvXVmpHC-zlxHmNQrGbAK-IjQdukTyxpKqhkBynfBC0edflh1JJWu3AaSVcZVMjwxW9_wLZCIIDfuS6hNGXt0BsVOF4MUKqXbcwWGEW_PjuJyJbWrlzXWyPWsO1iT-8o6iHVJwBDVkPeRY4jQndN54f1GxNjyDx_YqUpvUgHPIGdJLicguQnQP03QXBov1ucK2QDVZFUu7fKAo1WaHLk0Avsg-sNNYhbJ4c83EhHtD2SwqAxoAfFg8gxUsyJDG8v6O5_RSqNVr-SQsdX_0wzGznmGNOvRCJ4_EQzH1IWCnHdxdDD0JaTZuTK35OkpMjXeOUE_ywBJ7qJ1gxNOX4c4Hus82Up6oGzGdBwZktZ-1MwrofYpAP9sbuiAZQmns0qwF2XzcHaNYBndCG0iJGMmZs6KJSv42LSyEseE-nRU8hPCo-iGpkEX1Xfc3g1Z4S_atlhZvlpY7XSZAqZkk6vZLGeZQSNJQ2xPegdD3zDkrzIWVQBRaDhb9bKnV0ZyJpTNtp-ehbjqDLuBERfxdQLF1PF_fozBSQK9bLUzyW5atuKL4cDWdh5f6iyysYAO7JnXWCBFWm4p8kp1WvbYTY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "student_id",
+							"value": "55",
+							"type": "text"
+						},
+						{
+							"key": "name",
+							"value": "TEST",
+							"type": "text"
+						},
+						{
+							"key": "gender",
+							"value": "MALE",
+							"type": "text"
+						},
+						{
+							"key": "birth_date",
+							"value": "20-10-2020",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "vb@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "mobile",
+							"value": "1234567831",
+							"type": "text"
+						},
+						{
+							"key": "state",
+							"value": "kerala",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "123456",
+							"type": "text"
+						},
+						{
+							"key": "student_image",
+							"type": "file",
+							"src": "/C:/Users/Administrator/Pictures/dosa.png"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/update_profile",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"update_profile"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/api/forgot_password",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "mobile",
+							"value": "1234567831",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "123456",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/forgot_password",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"forgot_password"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/api/change_password",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIzIiwianRpIjoiNWVkNWZjMjY5ZmEyODNhMmRjMGFlMTIwZjk5MzhhNzM2MzVjNDE3OGMxODZlNWYxMmZjMDY0Y2IzZGIzODk0N2JkNjViNTU5MDI4ODJjMzEiLCJpYXQiOjE2NTg0NzI2NDguMTg4MTU0LCJuYmYiOjE2NTg0NzI2NDguMTg4MTY1LCJleHAiOjE2OTAwMDg2NDguMDc3MjE3LCJzdWIiOiI0MiIsInNjb3BlcyI6W119.qDumqXtoGfbthOu57fIdKCzsiEaCGlzyHS4bWcVKZBFl2o16Xwuo3Z3R6Lyc0zio17PIMY5LDYfGVHnA8YoZWmWEwvXVmpHC-zlxHmNQrGbAK-IjQdukTyxpKqhkBynfBC0edflh1JJWu3AaSVcZVMjwxW9_wLZCIIDfuS6hNGXt0BsVOF4MUKqXbcwWGEW_PjuJyJbWrlzXWyPWsO1iT-8o6iHVJwBDVkPeRY4jQndN54f1GxNjyDx_YqUpvUgHPIGdJLicguQnQP03QXBov1ucK2QDVZFUu7fKAo1WaHLk0Avsg-sNNYhbJ4c83EhHtD2SwqAxoAfFg8gxUsyJDG8v6O5_RSqNVr-SQsdX_0wzGznmGNOvRCJ4_EQzH1IWCnHdxdDD0JaTZuTK35OkpMjXeOUE_ywBJ7qJ1gxNOX4c4Hus82Up6oGzGdBwZktZ-1MwrofYpAP9sbuiAZQmns0qwF2XzcHaNYBndCG0iJGMmZs6KJSv42LSyEseE-nRU8hPCo-iGpkEX1Xfc3g1Z4S_atlhZvlpY7XSZAqZkk6vZLGeZQSNJQ2xPegdD3zDkrzIWVQBRaDhb9bKnV0ZyJpTNtp-ehbjqDLuBERfxdQLF1PF_fozBSQK9bLUzyW5atuKL4cDWdh5f6iyysYAO7JnXWCBFWm4p8kp1WvbYTY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "old_password",
+							"value": "123456",
+							"type": "text"
+						},
+						{
+							"key": "mobile",
+							"value": "1234567831",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "12345",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/change_password",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"change_password"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/api/check_user_active",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "mobile",
+							"value": "1234567831",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/check_user_active",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"check_user_active"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/api/check_package_expiry_status",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIzIiwianRpIjoiNWVkNWZjMjY5ZmEyODNhMmRjMGFlMTIwZjk5MzhhNzM2MzVjNDE3OGMxODZlNWYxMmZjMDY0Y2IzZGIzODk0N2JkNjViNTU5MDI4ODJjMzEiLCJpYXQiOjE2NTg0NzI2NDguMTg4MTU0LCJuYmYiOjE2NTg0NzI2NDguMTg4MTY1LCJleHAiOjE2OTAwMDg2NDguMDc3MjE3LCJzdWIiOiI0MiIsInNjb3BlcyI6W119.qDumqXtoGfbthOu57fIdKCzsiEaCGlzyHS4bWcVKZBFl2o16Xwuo3Z3R6Lyc0zio17PIMY5LDYfGVHnA8YoZWmWEwvXVmpHC-zlxHmNQrGbAK-IjQdukTyxpKqhkBynfBC0edflh1JJWu3AaSVcZVMjwxW9_wLZCIIDfuS6hNGXt0BsVOF4MUKqXbcwWGEW_PjuJyJbWrlzXWyPWsO1iT-8o6iHVJwBDVkPeRY4jQndN54f1GxNjyDx_YqUpvUgHPIGdJLicguQnQP03QXBov1ucK2QDVZFUu7fKAo1WaHLk0Avsg-sNNYhbJ4c83EhHtD2SwqAxoAfFg8gxUsyJDG8v6O5_RSqNVr-SQsdX_0wzGznmGNOvRCJ4_EQzH1IWCnHdxdDD0JaTZuTK35OkpMjXeOUE_ywBJ7qJ1gxNOX4c4Hus82Up6oGzGdBwZktZ-1MwrofYpAP9sbuiAZQmns0qwF2XzcHaNYBndCG0iJGMmZs6KJSv42LSyEseE-nRU8hPCo-iGpkEX1Xfc3g1Z4S_atlhZvlpY7XSZAqZkk6vZLGeZQSNJQ2xPegdD3zDkrzIWVQBRaDhb9bKnV0ZyJpTNtp-ehbjqDLuBERfxdQLF1PF_fozBSQK9bLUzyW5atuKL4cDWdh5f6iyysYAO7JnXWCBFWm4p8kp1WvbYTY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "student_id",
+							"value": "55",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/check_package_expiry_status",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"check_package_expiry_status"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/api/get_states",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIzIiwianRpIjoiNWVkNWZjMjY5ZmEyODNhMmRjMGFlMTIwZjk5MzhhNzM2MzVjNDE3OGMxODZlNWYxMmZjMDY0Y2IzZGIzODk0N2JkNjViNTU5MDI4ODJjMzEiLCJpYXQiOjE2NTg0NzI2NDguMTg4MTU0LCJuYmYiOjE2NTg0NzI2NDguMTg4MTY1LCJleHAiOjE2OTAwMDg2NDguMDc3MjE3LCJzdWIiOiI0MiIsInNjb3BlcyI6W119.qDumqXtoGfbthOu57fIdKCzsiEaCGlzyHS4bWcVKZBFl2o16Xwuo3Z3R6Lyc0zio17PIMY5LDYfGVHnA8YoZWmWEwvXVmpHC-zlxHmNQrGbAK-IjQdukTyxpKqhkBynfBC0edflh1JJWu3AaSVcZVMjwxW9_wLZCIIDfuS6hNGXt0BsVOF4MUKqXbcwWGEW_PjuJyJbWrlzXWyPWsO1iT-8o6iHVJwBDVkPeRY4jQndN54f1GxNjyDx_YqUpvUgHPIGdJLicguQnQP03QXBov1ucK2QDVZFUu7fKAo1WaHLk0Avsg-sNNYhbJ4c83EhHtD2SwqAxoAfFg8gxUsyJDG8v6O5_RSqNVr-SQsdX_0wzGznmGNOvRCJ4_EQzH1IWCnHdxdDD0JaTZuTK35OkpMjXeOUE_ywBJ7qJ1gxNOX4c4Hus82Up6oGzGdBwZktZ-1MwrofYpAP9sbuiAZQmns0qwF2XzcHaNYBndCG0iJGMmZs6KJSv42LSyEseE-nRU8hPCo-iGpkEX1Xfc3g1Z4S_atlhZvlpY7XSZAqZkk6vZLGeZQSNJQ2xPegdD3zDkrzIWVQBRaDhb9bKnV0ZyJpTNtp-ehbjqDLuBERfxdQLF1PF_fozBSQK9bLUzyW5atuKL4cDWdh5f6iyysYAO7JnXWCBFWm4p8kp1WvbYTY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/get_states",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"get_states"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/api/get_courses",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIzIiwianRpIjoiN2FlNzQ0OWJmMTFjMjI3YjMyOWIyZmUwMDg0ZWUzMjBmNmM2MWYwMjczZGY4NTVlZmU1MTA4OTNkNDU5MjBlMDVlOTk3OWQ0YTMwNzc3YzUiLCJpYXQiOjE2ODQ0ODAxODkuNTc1NjY0LCJuYmYiOjE2ODQ0ODAxODkuNTc1NjY4LCJleHAiOjE3MTYxMDI1ODkuNTcxNDY0LCJzdWIiOiIxODMiLCJzY29wZXMiOltdfQ.GDe0iI22ngeb08uAAAqsuFGpB8pKpSzLJBb01Zs8xdj0gV26ljsmF-O740vpoEzR-k4pei0B0cZcWjIKgDYrgkSxzlrhzdUrq1ckizDmdv4ziQHhEcbIC5NX6JTjPdaDG5-lSyxoCvev02XiZQ5KWwe_YGrSklK-eo7X5Jq_DvrvJeIKXg-Wb15W8r8x4CJh9tZT5BisRDpIe3VkzqBEevqVOUocI1cDyw5IYdH7zgqCsugJ84r4weiHBWkz-lCcsia3-e4sQDMSjX5EwxaF2ZJZ8OHjpBpJVwtqytt8x2MFqe6RB7v_WQpoZ6i4PVENAVWpxyOT8A0ItKmPJ-VwAKLTe6vbHeTV3aGyKhYG-I0sjf9xfD9ULyCQ7ZaWN0FWecdnLM_lm1RCQYc_27rkjoHZoZ0W5rnqp2v2w15Ssluz14Q9TGwXLQ6hW1-u_t_KbHOp6AFd0MBeuxkIle5JbPa5EAAk-jEr-BXBlFZtHnCM6blWuLIDUM4ATHr7jAxSCubJIKgfHoGLQmxlF2zGpfesuUga8FpxMBADt_-e9MiurtT5cIqWJAGyO1-0eOItgAt_cuCi7FOtkFIKMWJRW0MgAHsZBu3c96pd9XoefvevZrdqC7R-5WpdJ2COV3_NA2888IvoqaAreVASp9VJDRkQkt0nrg1UN1FW6A84PiI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "student_id",
+							"value": "14",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://mediguru.bcompetitive.in/api/get_courses",
+					"protocol": "http",
+					"host": [
+						"mediguru",
+						"bcompetitive",
+						"in"
+					],
+					"path": [
+						"api",
+						"get_courses"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/api/get_subjects",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIzIiwianRpIjoiZGI5NmY4NzNmZTZiOGQ2N2I1Y2FjYTM5ZTY3NDAxZGRkYWQ0YjMwYjFhZGU4MzFhNjViMWQ0NzYzMGRiMjQ5YjFhNDkwNThjMTgwMWJlNGIiLCJpYXQiOjE2ODQzMDA2NjIuMzI1MTY3LCJuYmYiOjE2ODQzMDA2NjIuMzI1MTc4LCJleHAiOjE3MTU5MjMwNjIuMzIwNzY0LCJzdWIiOiIxNiIsInNjb3BlcyI6W119.OFYXpBfohzR2oRcF5J_NwYpb9bWPNg973t0lut5STB3RQkb1ovX0xntdh8kBTy5P2ipBx02Ripo7y_gw2kYOY0xA4mhbPk3nMI3_rCqqrJnKfgvR4c_wZIYPRX9WNr0wwAzfj5fz4Nq4csZrkddb6himM51iAG55VHOmvIzYtcstzQtBrygdbviFI7Y1SCmVHXiPjGJOWKj7U2wnvTCFfozSWJCkAqB8I6yCBc_I6VfTCT_lfdDiyJ2Ft5tMl3mS6XyePrYxzHr06l2QXL-z7CifnrFGVttZZ420MifOxC1Tw1CAAxRI4iNn5-79ONdcLRrelwZgk00bUJID9Qc-Hp9IZCPHT2VY5rggUWcp2NfRswfzg0OKLzNZuC1F4w0KBCu39DGt6PRillw2I_g4V-Ax58sPgjJQR-FciUMv2zG9ocCfedgealBesXyQGfR3i0nnbeAYaj_H2lIIPFEvcR6imZLk3cqxD4JgP1hR24EOepgcksZFxux3u1Rr4t6Br_5dzm4SuRDJRrN-aiLzMhzq5TniFA8nGa18d6TNP73y7rJedCRoGw59399WUMTCWmn0Bm6qKGAdcqSQjPXh28x8q325lEKaD9h1KnzLKxIh2AShgM5o4rJZ0EWCeA02Ue1fSFrxca9G0-E8JybeAmx4lFsmayWSSJsgI1iXpXw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "course_id",
+							"value": "199",
+							"type": "text"
+						},
+						{
+							"key": "student_id",
+							"value": "14",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/v2/get_subjects",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v2",
+						"get_subjects"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/api/get_lessons",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIzIiwianRpIjoiZDUyNWU4NGNkNGY2NjJlMzdkODdkMjUyMzRkNmFkNjA4M2JlZmQyMTc3YjIwYWQwNDZlMDJiMzE3Yjk4NGQwODEwM2M5NTUwZDJmMDI0NjciLCJpYXQiOjE2NjY2ODA4MjguODMxNzg4LCJuYmYiOjE2NjY2ODA4MjguODMxNzk0LCJleHAiOjE2OTgyMTY4MjguODI5MDE4LCJzdWIiOiIxNiIsInNjb3BlcyI6W119.E4m6Azf0ZF9FAsZihX7Z_5_7gHxidU6XP603u_2id-G4fIP3Oe2-waZ2w1GK77jbvyH3xuRPpBrVUJMPBbVbEXKmpJdq-5AERXp3DF8l9q7_Pt46yh0VrTpyVTRapBCmiaWqe3eBQxWgskQKS_B23CTZSQOFxcQETQBL61sV4d7ztpXw7ZcRpN_npKeA1_ixXE4NnuIv_ZZYitTg-T0yFDOBS0FbMHqDrQJlY5oAE3ZouZnYzgtZ5GjIzJdBHKRQNbkIB6mvKJ3wrPQ_f-1odx9AHasIXKxp5Eh6RHQikn6BwoH5zquaW1g9e0id-3IbU1iHZ4YfISjIO3BnoCMYTirhmLbMZ-PE4rScwjXILjQuH59Nte4WUZueWMDvU__x2noTrZBJnfieCkls7F9mPVMcWX6lBQxbmOfqbbYfUswP2liD-6imdd1REdR5Gzydg_MhOTF3SocWgzIV0kbOYYpWG43kvXQh4DeK-1SKfaOQEEGvpwG1ON_vAHleHmrhJJ9Unt5W-0x0wzoJoBBjt2FPCsw3CD75rbwh7PHm4mVkE5EH9DmKdSeuCCw0MxmmsEprBFIfWCggg0yddOrC-UdP67WG3SgQDn__rzNAYzQZn3sys5D05b5pC9Yftt7IUbGNTDHoVnrksaRVZPPORdte0mV0QqCQ7mG7ZGjuaxw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "subject_id",
+							"value": "14",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://mediguru.bcompetitive.in/api/get_lessons",
+					"protocol": "http",
+					"host": [
+						"mediguru",
+						"bcompetitive",
+						"in"
+					],
+					"path": [
+						"api",
+						"get_lessons"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/api/get_lesson_items",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIzIiwianRpIjoiMzZlZTFkZTUzYWUyYjBiZmIzM2Q3MmI5MzI0YmFhYTc1Yjk2ZTY4MDE5OWYzYWYwMDEwZmMwYjZlNzIwMWRlOWJjZmNiNWZkYmJiZjYyMzciLCJpYXQiOjE2Njc5OTE0NTcuNzkwMDU2LCJuYmYiOjE2Njc5OTE0NTcuNzkwMDU5LCJleHAiOjE2OTk1Mjc0NTcuNzg3MjE4LCJzdWIiOiIxNiIsInNjb3BlcyI6W119.gRWcN0Anbhkl4xvmuThsB2VIG_mZ4TpjiTaIhWh3nMIaMfVUFsj-rVC2P1CkZKnrB0bhDvJ_m9MslE2gkZx4CVAQwabSpBYVC98sg4QdD5MXitGMtN2hhuumyM8AbC6mic2zLZefIn_ohp_hXDWDSBnwA_R9My8UVkb1TnffNVXhXIK_EsnEgsVA4j-xSDKsFoLaMXCEL4q4bR_fslHgNqmTFIOE2-niD3zZRfT6r9K9mcmsNagcbTmIc9PJUEkvYbb8thzysLUi8LuKRXmUqMm8G2jsOzAHZaHjLqcT5hDCKKAuTyHiOnWpDJT-Bna9upZcQVRCbk1Ef5yf7SXNfSRjt95xvfq32Ioe-cold083BDo6AdR4pfSf50TQNx63IoILD23SFLvXK795VhtEjx02Uv2vtu2WrTSoN6zoAv59d0E3oEQLWNuGPZnxl8DmkOOs41Sf4svoAILW7BEhbKjw21sPSQJEe_UtDXuspljF_M7QfAcHqJxyS8w4CxE9NWRMB5oWiw0DTkBNcUK2Cav_24zBMCbPcLVNRlT8rGHpBvtUMJ4SqGf4zF-PZm1FawiYuHdiOQMDmLLCQhw4pdgLftDaFwm2WCbZu0Xy1TSL8zkgJPGmSHkSkawbsFdNGh5q9GR0fAt8vwsm0LRo1bmJR1nF6F92dwf5ynUbtqY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "lesson_id",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "student_id",
+							"value": "14",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/v2/get_lesson_items",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v2",
+						"get_lesson_items"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/api/get_lesson_item_details",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIzIiwianRpIjoiNjhmZDFhZmUzNTEyNGNjOTRkYTczNWNhMmFiNDhhNWY1ZDgwYTI3ZTk1ZjQ0NjBlYWY0MzU1ZDhhMDM4ZjU2Mzc4MzhlNjJiZGU4ZWI3MmEiLCJpYXQiOjE2OTExMzE4ODcuMDg1MDc4LCJuYmYiOjE2OTExMzE4ODcuMDg1MDkxLCJleHAiOjE3MjI3NTQyODYuODM4MjE1LCJzdWIiOiIxNiIsInNjb3BlcyI6W119.UpmRA4Cwx3Ow8igiy51cl-FHr9FPnY76Iso4M3U2C90pYGUdYZ5q9B1mMg6owSlcLdHaozM13ZoSvQExaIfSDyyqlNipSz58A-IHP9Zeo3fN7Z8IBrjF42bN_r5y9OPHv3uDzNxFAmw0fD6YYzDGmfSU1q9LZGBTDr9krzaCaOItd_si99mOmRHkHef6g-t_rq5WrAhv2S8SMyc7SpR7IbDDDvksH_udX2mlVY3jePKnInD6yWudiCQOqMt_bRjckoyubmsXstiOVDCGyO06iHu2QgrbYK6uWm8RWM5AvZUxBBCUpzqNQ9YD9w62Sv1j1VlgQeDyq3GOmwKb2PtixRTRvvHjQpI-53LohDTonMD8ubHUr1kfbOuSpzZlUVGlSPngLEcODi4lHlttEdNfxpbAb68f0ZPViU4DIU53P1YCwow8KV31k6KXP_rWwAi0frxKsHH_LAFaqaHh9pi6CAEucxeIWxOwuiB0oBPGn1VkJqSvK056JLwqgsmjfeZF97MA04iwciJXiz-6k22ZIcBlLGv3DVpINaSY8XECV5FWTdSi9tM5oad4ANo-gBVkzFt9H-82wXFm-YGeV-HeVXNNeRGs_sLw7gzgOxcu3Cp6jv2nrx-7d7lonZOOnQQOIF9SEKz8O5nMTaUxb-k0as_qMuXVXbid-SpZyv52jLU",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "item_unique_id",
+							"value": "4567",
+							"type": "text"
+						},
+						{
+							"key": "tab_id",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "student_id",
+							"value": "14",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/v2/get_lesson_item_details",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v2",
+						"get_lesson_item_details"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/api/check_device",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIzIiwianRpIjoiNWVkNWZjMjY5ZmEyODNhMmRjMGFlMTIwZjk5MzhhNzM2MzVjNDE3OGMxODZlNWYxMmZjMDY0Y2IzZGIzODk0N2JkNjViNTU5MDI4ODJjMzEiLCJpYXQiOjE2NTg0NzI2NDguMTg4MTU0LCJuYmYiOjE2NTg0NzI2NDguMTg4MTY1LCJleHAiOjE2OTAwMDg2NDguMDc3MjE3LCJzdWIiOiI0MiIsInNjb3BlcyI6W119.qDumqXtoGfbthOu57fIdKCzsiEaCGlzyHS4bWcVKZBFl2o16Xwuo3Z3R6Lyc0zio17PIMY5LDYfGVHnA8YoZWmWEwvXVmpHC-zlxHmNQrGbAK-IjQdukTyxpKqhkBynfBC0edflh1JJWu3AaSVcZVMjwxW9_wLZCIIDfuS6hNGXt0BsVOF4MUKqXbcwWGEW_PjuJyJbWrlzXWyPWsO1iT-8o6iHVJwBDVkPeRY4jQndN54f1GxNjyDx_YqUpvUgHPIGdJLicguQnQP03QXBov1ucK2QDVZFUu7fKAo1WaHLk0Avsg-sNNYhbJ4c83EhHtD2SwqAxoAfFg8gxUsyJDG8v6O5_RSqNVr-SQsdX_0wzGznmGNOvRCJ4_EQzH1IWCnHdxdDD0JaTZuTK35OkpMjXeOUE_ywBJ7qJ1gxNOX4c4Hus82Up6oGzGdBwZktZ-1MwrofYpAP9sbuiAZQmns0qwF2XzcHaNYBndCG0iJGMmZs6KJSv42LSyEseE-nRU8hPCo-iGpkEX1Xfc3g1Z4S_atlhZvlpY7XSZAqZkk6vZLGeZQSNJQ2xPegdD3zDkrzIWVQBRaDhb9bKnV0ZyJpTNtp-ehbjqDLuBERfxdQLF1PF_fozBSQK9bLUzyW5atuKL4cDWdh5f6iyysYAO7JnXWCBFWm4p8kp1WvbYTY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "student_id",
+							"value": "54",
+							"type": "text"
+						},
+						{
+							"key": "android_ios_id",
+							"value": "OMC27.70-56",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/check_device",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"check_device"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/api/send_otp",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "mobile",
+							"value": "9995338385",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://mediguru.bcompetitive.in/api/send_otp",
+					"protocol": "http",
+					"host": [
+						"mediguru",
+						"bcompetitive",
+						"in"
+					],
+					"path": [
+						"api",
+						"send_otp"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/api/verify_otp",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "otp",
+							"value": "2721",
+							"type": "text"
+						},
+						{
+							"key": "mobile",
+							"value": "9995338385",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://mediguru.bcompetitive.in/api/verify_otp",
+					"protocol": "http",
+					"host": [
+						"mediguru",
+						"bcompetitive",
+						"in"
+					],
+					"path": [
+						"api",
+						"verify_otp"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/api/get_promocode_value",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIzIiwianRpIjoiMzM2ODA0NTU0YTU2N2Q3NjI2NDJjNzZiNDIxZjA0OGFkMTczYzBkZjNiNGRiNzMzOTg2YWM2NzRhY2M3MDQzZDA3NjVmNjEyODE3MWE2MjMiLCJpYXQiOjE2OTI5Mzg5NjguMjU3NzU0LCJuYmYiOjE2OTI5Mzg5NjguMjU3NzY2LCJleHAiOjE3MjQ1NjEzNjguMTExNzMsInN1YiI6IjE2Iiwic2NvcGVzIjpbXX0.IpEVzlytFPWzbmibP4w4AalG--ai0ePyJtkmRoxjFDFvp-85-KQVpXDoi59CD7fW2PRPfWzA-j4dZaiKDrjWKAVfpIgIhKLeG9rdZ1tgA1WqnKl_oTT5eFgnISx2GbHfvLuYmk7r0wt2cmGdbz9EqTN2JZnlSGPERcKhDI-0XaaDDnovUyHIXQTynt2yz-0nykaD3hL0AJXwCDhr4Vsx9wVrKNY0KHrGUkilpy-43a_NVomo8mUzCFxbwDmGrf4f1Uax2mtT7IAR4mSOyt6o524B1S08yAPpzZmSk6IAYQEMEMlFcaR_7PoZPXlIDqk4WU7pO5kZKirp_sf1KnXU2A5sRqDs6T4QP_VLoFFvA0DXEpZUYSi5eJFZkzIhTR3PHaV0BklnfRjgIDAVIvHxpa-zEZMicYZLDZf-8IKPUBAltk7ZmQ2J9GHcX4ZQzFQT1rsevf2XTp5iv-40jElkKKnyqaWq8PrdzNR_IlE__397PPkZQCxBfYrPveuxsVgnMWWdajdmR3bncH75pLuaVmBFJv460fSZiXEA-mgVFVXH_X41dNywOq89NVFLBxcDisOfcG33MDU7R0zHSWwQ0uoAzBzBdytgnQoDz39T1_5owJqBjoKBRanzh6sRnqm9YY1TQYqeUCxXhAzanbknCDa5Gt-51WV_caEIpQzj2aE",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "promocode",
+							"value": "ASW123",
+							"type": "text"
+						},
+						{
+							"key": "course_id",
+							"value": "12",
+							"type": "text"
+						},
+						{
+							"key": "os_type",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "user_id",
+							"value": "12",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/v2/get_promocode_value",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v2",
+						"get_promocode_value"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/api/get_referral_code_value",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIzIiwianRpIjoiNGUwNGIyOGQ4MjRhYWQ2Yjg5NjVkZTM3MTZkOTM2OTg1NTczZDdhYWU0NWViYWJmMGE0ZTllNmY1Y2I0MjVmMWQ4ZTYxZjkwODU5NTY4NjgiLCJpYXQiOjE2NTg0NzUwNTMuNDg2OTk1LCJuYmYiOjE2NTg0NzUwNTMuNDg3MDAxLCJleHAiOjE2OTAwMTEwNTMuNDYxODIxLCJzdWIiOiI0MiIsInNjb3BlcyI6W119.fdJFv9aPxn_PPKNnLHm8GpC01u_DXTDnlvJVj-rUATfayjirTgtCwo3VKnRJNb-xwdQrtla4noo3yLMH0BKB_kDqJT5sEjdL9Plomjvl_jcREeI9IzuX2q7rM43qit8ynjaWIwuVXyAyPqWsDP2C_q8IcyBHmKfQ18KjQN5LfbPfuJNpHOymwPTISXxRqyNFBcZtIKa1_0ePmMiyQipgnHy4SXPSANQVT-ji79uwTHvuiMkkhoKRvaOMl9ov9HH6KdqrYuhk89aVAQhY7rYxw1lbEafg0fUFV1PnSDDjfW43xyJn5q3gdMZVKg0ty6CetBg4_erVofpusoN1XXdorirmVAYsNk6LSz9dd1HiPx14k8iQaO-65DMYYuKHxDMw-qJ0rSwpuK7xK0mf6C8UYuGEK1alQ0FHjhoyD0GB5imolEJWqRYsct7_D4glDKBGYC4ZlljR4WcTIuNs-DCeLe3d9n7oz-_hLBfbmUVFjc2lj1cRh4qRPszQnP_CbUvhvyh0JKFJR-Ytz_069xh3gNj1YZ_IR126_xmWsMrbgHavyxXw5Vcnzd0Zxz4sdBjxnqB-6t0hMFQwxS9peJ-N2DiW-bf4l_B1RqzsQVC0KVdAS3RArykdzFYQ8K3X_ixqGvYgGLBtSHh3yvN2p8DSs8D-KSRb6Fs-otg_d5HgjdA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "referral_code",
+							"value": "SHA2022",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/get_referral_code_value",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"get_referral_code_value"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/api/get_purchased_subjects",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIzIiwianRpIjoiZmFkYTQ3YWE2NTU0ZTk5YmRhNDk2OWNjMWVkZTFiZTM2YWQzYWM0OTFmZjc1MTdhYjJlMWYxYzA3MjIyYzc2NDdjMjNmM2I3NTI2OGYxMTMiLCJpYXQiOjE2NTkzMjg1MjUuODYzMDQ2LCJuYmYiOjE2NTkzMjg1MjUuODYzMDUyLCJleHAiOjE2OTA4NjQ1MjUuNzI5NDg4LCJzdWIiOiI0MiIsInNjb3BlcyI6W119.mHse9557aQMQXLCJt88ebws69fUW38kCAYP9Ijlr_2hvm8HLWg9rr7j89tKSCxa7pWlTxW3XKZ2GGB1UwwrjfYyzkeL-kaUxJnFxgd6zjarS9mkBJWbVrVvM0fBS3XnldRQadMi01lcdPlvTXTYlBof7bvkcBRxKsFiJfMkfy6ww0FwAmovhNKRaW2Volz7cJFN7OQ9eVGHjfs6ECAgccRZeIMrlSneP0W5E3I1EeXAg0NIFzlhV_QIOtoEjs1jE90caMgczY2bii7_al61BI4rSuIiwzUb1EKFzfBllg8PUdCgeybBadn7ShXt2ixRibwJlg5Qp4mJbuZ-452F-_aUXrfMEccXlYz6njRoKK6wSIydi4xM_0n1oKKNm1ia1ZV1a6Je-9EvXPbT_AT0LP6_1JSNHzo29qnjA1VS6Xx-HVopO41JkuGDLbHw0cpCKSOLzD2va55-jVVZyWrNxTsSFOBN3yOk728hyAJjbHRwz_Tnwckua26Lof9rLR-A2L3UozbDtIhpwYlLOKfro7tA-heDb4Q332R12V7P709aQC1GcmGHraObTHkA4adreWq94zzxYur2p6aJ9ub70GiHW0EifI3QzrKv8uId9o1co2ki8JBt5MlHkqDnitHIp4foIDRdlwE4NybOphDGaeD-qfHafuPvFG9oA78xK_cE",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "student_id",
+							"value": "1",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/get_purchased_subjects",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"get_purchased_subjects"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/api/package_purchase",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIzIiwianRpIjoiZGZjOTc0YTU2ZGFjYTBjN2Q2NmE4YTI0MWY0NzlhNmVlYTZkNTY4M2ViMGI0YjYzMTVjY2M5OWViYjZmOTU2MzQ1NmRlM2RmZjJjNzdjNzMiLCJpYXQiOjE2NjE1MTI3MDMuODYwNjUyLCJuYmYiOjE2NjE1MTI3MDMuODYwNjU5LCJleHAiOjE2OTMwNDg3MDMuODMyNTM1LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.bTVIabFAQn-BzKvYEweAnij5Wsp0Ls5ro4s1bas9qDpO_jBpvKfLWp1Mk--nsI7PiRiYrtrFwHjJ15zONCOTuRYXlmVR48_1GINdgC8lxX-5xEnZLNA8rDc30fvj3dDzGyzNDpcE_hVazB9gHFJZVCgRpm77MsFhIn3mEyTnlUPKoJR98fO4gebKTDw_1msh2dngV-xEwr5oqSkyvTSFLWfd5jUra4oRTmujEI8K2oznZ3kQrkYnpCDThaqlobDQQpDHSV4k_jIBTpR8F9LStKuFFc5Kx1vHpLH58E1skZ6ptL9iRMQfduEN--PKGUEoPgJPYJuVBJh-KQEfgwUTxoehn6jvMvMcFD1fV20bPOziDoReMENWngpXOdQu07xzSYP9zCtD0I_Ps8nUHDaRC_Be5SWrhXZEK_kGo-FWk7b9WZvlrRdidN0OyeBdp-YXSaXn4yA4jLKYZT2As7Bs2L98TfcireY4If_O5MWG7n9dswxlZtXM2pidcvLhdNYEjXYA9BXA8XmqUVWhVTfz1lb9dQNdKOgz8t3lq5twuov5CVqcciCCcwBfen7EPL-DfCa-gCIqgHhS4oSljsXtRyUHR-9ubpFEdYJtLlaGft5KrOtmZ6R3OK07hAwmFqrbeNZbBe_DeZyJoTSXiP5zky1_EsDVEaqTF4UCwkosP6g",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/vnd.api+json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "student_id",
+							"value": "15",
+							"type": "text"
+						},
+						{
+							"key": "course_unique_id",
+							"value": "2826",
+							"type": "text"
+						},
+						{
+							"key": "package_type",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "payment_id",
+							"value": "fsdf23111dscsd4322",
+							"type": "text"
+						},
+						{
+							"key": "promocode",
+							"value": "ASD222",
+							"type": "text"
+						},
+						{
+							"key": "promocode_value",
+							"value": "2000",
+							"type": "text"
+						},
+						{
+							"key": "referral_code",
+							"value": "sdffsfs",
+							"type": "text"
+						},
+						{
+							"key": "referral_value",
+							"value": "0",
+							"type": "text"
+						},
+						{
+							"key": "package_rate",
+							"value": "5000",
+							"type": "text"
+						},
+						{
+							"key": "net_amount",
+							"value": "4800",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://mediguru.bcompetitive.in/api/purchase_package",
+					"protocol": "http",
+					"host": [
+						"mediguru",
+						"bcompetitive",
+						"in"
+					],
+					"path": [
+						"api",
+						"purchase_package"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/api/single_purchase_package",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIzIiwianRpIjoiNzQyN2JkZWYzMTY3MGUxMGZiMTUyZGUzZGU5YjU1NDU1YmY5YzZkZDNkOWE3MWU2NTk1MjA3NTQ2NjY4MzBjMWRmYmFkMWM0Yjc5MzdkNTMiLCJpYXQiOjE2ODYxMzY2OTcuNTgwNDcsIm5iZiI6MTY4NjEzNjY5Ny41ODA0NzcsImV4cCI6MTcxNzc1OTA5Ny41NzQxMTksInN1YiI6IjE2Iiwic2NvcGVzIjpbXX0.oEVY9AhfN7Pb5jUibbWiKIsOIN5tSyo14bZfHt0hBfrhfZhu6Tu-ryGEy8KdTDGwwdf9yvkbKzKV5Uf5GcNLTXDj99ewr1jT53QpEuOAlIHLPsS5b_0_NjX5odUe9iprBohZBenB0T-W0t5KmOkWDUZFXbDuZxUI1luP0xQktwRUYexTHfMZy3nGxJl6Ew79aMQGXIqqHMeku7dSWCXDLH9lpn22SAFsQsAdMEN53vBTOtk8nu-6U7bF9tpv4_llwpmSWRGVRnm5DKXhEANBMALF8TZmowJfEehJVDPjnpvReSdGb6dji7sRW7dX86SQfGbGJAqwbZKgHB12e0ZZTQK6Ki5Sek4MlBq9TdK3Cr_MtNMVuqmbEvh0as5uSz5FdhPUMusxBTH8LitLtwCc1RwgpNn8P4n8Lx24v_K-KIvmdsu9fPLaahg3crIJN9hIQCFlxOycHN0wexSQxNT1DbD6h3EA1zN6iFD3c9WsHgExxeOziljT-l1tBWxi5SKstagkhaMWsKa3hM7hmpQY9wjaCJbAUVoOQd_q9ln7uYE_5ESnBHh5Q8cO_L1zbG0fYawXlA8P7HGml1-omC4TyK7IUbjWr_jJl9w-9KAyfdCG0RyWE8D4u3pqyCbAMdNJa-3kBBfZaoHliC24VX9KBQT5y4OYr_Q7Gr1tMnuBsZ4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/vnd.api+json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "student_id",
+							"value": "14",
+							"type": "text"
+						},
+						{
+							"key": "package_id",
+							"value": "55",
+							"type": "text"
+						},
+						{
+							"key": "payment_id",
+							"value": "fsdf23111dscsd4322",
+							"type": "text"
+						},
+						{
+							"key": "promocode",
+							"value": "ASD222",
+							"type": "text"
+						},
+						{
+							"key": "promocode_value",
+							"value": "2000",
+							"type": "text"
+						},
+						{
+							"key": "referral_code",
+							"value": "sdffsfs",
+							"type": "text"
+						},
+						{
+							"key": "referral_value",
+							"value": "0",
+							"type": "text"
+						},
+						{
+							"key": "package_rate",
+							"value": "799",
+							"type": "text"
+						},
+						{
+							"key": "net_amount",
+							"value": "799",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://mediguru.bcompetitive.in/api/single_purchase_package",
+					"protocol": "http",
+					"host": [
+						"mediguru",
+						"bcompetitive",
+						"in"
+					],
+					"path": [
+						"api",
+						"single_purchase_package"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/api/get_question_papers",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIzIiwianRpIjoiNWE4NTc1ZTRmZTRhZWMyMmJmMWEwMTRkZWMxN2UxYTNmMzk2YjNiZDZiZDEzYTE1MWUzOTM4YmUyMzdlYzM0ZTM3ZWEwMmU5YzVhYjUyYTAiLCJpYXQiOjE2NTkwMDcxMDcuOTExMTM2LCJuYmYiOjE2NTkwMDcxMDcuOTExMTQ4LCJleHAiOjE2OTA1NDMxMDcuNzAwMzg4LCJzdWIiOiI0MiIsInNjb3BlcyI6W119.V0NAKcF4chDDFdoBFA9S3xGvMTIFmorqcjUVMkHC0mYLcZGTh4gqbrD51NUN-oxcEsb7FNsQrm_iZ13IXSFCm5AtqfgGBkN6DcGMD6rlf1E8rZ6F02a9jgLtlgAuLmki2C8mVsXxoY2ME5qWykK_qmN8MSVg5yZdcLJcXHjOaJLMcoWnE4xqChm57FUHDhNscvf_wNK5vefqnqpaeWfQtS3rsHbMuzci5DatcEOp_74yeB3qF_W6pcIbzEByQpcv17TEcNzUkhUVKXTL4MEqTeYqnPajGLRT5V5f_j3loCNnj1RhKx3yL7SU6c0yCJ4nmUdmVxsmVMZIORBkiS_WQ9OXM_RhO76YdNI6lbEE6Q6Hf_TIhRgWpn8BjfkqdoIr6td4n0rjJCuX16LSiskDmn_56knFNd9CesjH7Mp4aipub6jpdam2YVyZEpVoKox_k2HVGxyL-Avx56u-NgSRsUzeBxoi2HxxJZge7ZQ6ih2vnqL0wZ5wacHc5n8HxxIOObLn-LAx8dxGbrTMTWvlLvevqle8WuwjUNBhebGLudR6YQpLwEhpy8AuYSxV7B65dJfMWCbe_i6SEHdYpDQsGpWkHc13o0ekIXy9kefDPy2mU2aVPipdQA6odGyM4NuxTJnq1To2vGuyeoNL35Tp_cLarHgYNWRAdSI-ETm4vt4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "subject_id",
+							"value": "1",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/get_question_papers",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"get_question_papers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/api/get_questions",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiNjM5Y2Y5Y2JiOGYyMjljMzg5YzA5MWQ2YzBiY2JhNGM1M2Q5NWJiMmE0OGRmZGZiYjUyMTNkZmI4MmM0ZDkxMzZmMWUyYWJjZGQ0ZGNlODEiLCJpYXQiOjE2NDIyMjU1NjEuMzQ4MDcsIm5iZiI6MTY0MjIyNTU2MS4zNDgwODEsImV4cCI6MTY3Mzc2MTU2MS4yNDk4NDMsInN1YiI6IjMiLCJzY29wZXMiOltdfQ.iDGiDoYo-9XuDvpaxsaCQUX2jzx9kHTbrjaBPvZl7pLd1ftD6V9tXHsgyGy6ng4vVXCV8Ws4fpEeHe_ydX_-GMMZIBxFtqaLZbh4clcWUZqHl56Gs_bV2iVlRzYEKyakAGzm25H9miAWoa2NFL05g6ksWa1nPoyVg4JBDUUClcmjTCXwHo9BtKhOBMUH9XmheUgItxAGW3GAaQYLXNeUGEHDMD0ezQgO90crmIrKxaRS27zKCimOYrzBhjnCK5mn615tUdKxpoPE6y4ZDpOW5VqiiJai5-sJ2cZnqcnxUygcWv-y6Q3GQRvoO8F4En9g0JPrprdNjEZArtLMN3vkVFoxOPvu8345xSeCc_VMgpddcXX2Ko50v53qthQuw4ansfqZMARlGvkinulrA-cjxPz78sfxkkJOFRDBjJh7v46-klw1l_K1QwCxoa6IlBZV6-2hBz6a1V80lAkOXOD490YejduxsEDhA7Bo8XT_dEcoYUSp2IYALdZBAHZyQ8-MWxFuzz-mzxK_xdhExw_HUSIPWpHa1wTe2Mulds_2ikki7ZTQzsSQs1o6jE0BEfQ_JS6tMIKoecRhDQYzsAqVzdqnFiU0ppOtBPC09T6bGKXfBS68HuHkrj79LewIAsZy5MM-N7_Hzs0gtY_q9ELPTNAKxnWcpmnENfuWOEjBeYg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "question_paper_id",
+							"value": "1",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/get_questions",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"get_questions"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/api/set_mcq_results",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIzIiwianRpIjoiZjJjMjA3MmM4ZTRlZjQ3N2M5YTg4YThhYjEzYTg3M2U1YjdmNDJmYmY1MjIwYjIxMzUzYTA2MWM4MTZhZmFjNTRkNDMyNzEwODQ4ODU2YjMiLCJpYXQiOjE2NjYyNTc3MTUuNDA3MjAzLCJuYmYiOjE2NjYyNTc3MTUuNDA3MjA3LCJleHAiOjE2OTc3OTM3MTUuNDAzNjgzLCJzdWIiOiIxNiIsInNjb3BlcyI6W119.Hmjp-XGM74aCk7xvHWetEKXZIm8pDH8kL0fNuzZfiKCs1YK5PRnfN04ZlmgGeWiZFHLbx17AY3oPjs4zXaGTPN569vSWg4Ccjw-5eU1y5TTtOXj9Z5cE3YdJ5bQMfNZIL-qKnFUoHgSVT3V2R3UNPxrJNEURkCAl85rIlcvuXFBQj8dTSgcNNMnaneNxZfphgRPCHMN1nXynnwBgzMES6wMUhM3ulTBdeKI2JXsp_bHtpl3v8CmiWhJzluw8I1sMbmFuzKNS_hNmnsk1LdmJ3KcuwbKPuxPDZfeLIt_VYzf2GnBPmA1NW1-A1O_lSkhAELvmixm6eEsgHUzoD88-9M5UDlRrzxXpKnvQVCr8lWJRzqLzzMMRZj9TsdsTpR2d_Ea2J1Y8JxmS5k72_sG6OCZMikQLuNxaJ8Ih5-TfSj8gwpbr2vR8fT1qyUuXuduQYHBNfE4X-Pv46E_d7pm5h-VZTxyiJEBg-H-fimz69SVKs1BvxmwFBKxhZyxX2ClhH_FJM5-G9Xp-4BHcw7zM-P7gyEc-QUGUhPREK-eMwdLgs1qsWguU3RTrPrcEYUjWKYnyX-KCsCM_Vd5LbbeRiLMKDhrjD15b6V6Nr3n_qQh4hypnkNEydSriTzPw7E7vu62tIvmCzw2NDsij2Mg9JBbXo2Ybhi8hfC0nno8r_ic",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "subject_id",
+							"value": "14",
+							"type": "text"
+						},
+						{
+							"key": "student_id",
+							"value": "4",
+							"type": "text"
+						},
+						{
+							"key": "question_paper_id",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "test_result",
+							"value": "{\"mcq_result\":[{\"question_id\":\"1\",\"answer\":\"2\"},{\"question_id\":\"2\",\"answer\":\"4\"},{\"question_id\":\"3\",\"answer\":\"1\"},{\"question_id\":\"4\",\"answer\":\"3\"},{\"question_id\":\"5\",\"answer\":\"1\"},{\"question_id\":\"6\",\"answer\":\"0\"},{\"question_id\":\"7\",\"answer\":\"0\"},{\"question_id\":\"8\",\"answer\":\"0\"},{\"question_id\":\"9\",\"answer\":\"0\"}]}",
+							"type": "text"
+						},
+						{
+							"key": "total_time",
+							"value": "120",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://mediguru.bcompetitive.in/api/set_mcq_results",
+					"protocol": "http",
+					"host": [
+						"mediguru",
+						"bcompetitive",
+						"in"
+					],
+					"path": [
+						"api",
+						"set_mcq_results"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/api/get_mcq_analytics",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIzIiwianRpIjoiNDgzMjI5OTAwYjQwNTk4NzQxZWVjNmNkZGQyMjhmY2U2OTNkYmQyMTY2M2FhNDI5YjAzZTAwM2NiNmFjOThhYTA2OWZmOTBlY2E1MDYxNGYiLCJpYXQiOjE2NTkwODU4MTQuNDQxNDQ2LCJuYmYiOjE2NTkwODU4MTQuNDQxNDU2LCJleHAiOjE2OTA2MjE4MTQuMzM1MzAyLCJzdWIiOiI0MiIsInNjb3BlcyI6W119.G6Y7HtIet5xj16yNfbqDbjkTDwz4R5_nSe1xZ4LSu4QZAhWzaUSF882WfJBfvb6NYziRPpC4KSkl4w2BByLQ71VNW1Zm24uo1Lh34B-lZQ1j1--0BlQp-lb9esoiKUOGvPnG44QVatDpy8Gwae_2crlA7eYzJCTUhIlJglH75RSEwytyr41t7JiSaYvTZpcrxSmvZ-1pceLm9acqIYhes3oRNQ1tQUa2ee9wGXdrKNYRJ1sR4JoF6IqB7-wKcSG1Xwfr_k0ufII7Mpw-Eb9fDRu7v5Cr1f7B1QQVA3CFiQr3iPPIGAmi-xzlv2f5kjFVWGrepWCoHOtjTGUXVB5mqPztEcafNisP3VzEbi4iNeRCuD0xJQ7t8A4IGH6o3seEAPIqk38QX6NzJgjdENUUK9GbBoP0lmwmqNgsWAaOHCSqnHFtjNW5rJeV_FaRitbqVwbeOysxD_LDOAYHuoqtR51bEH0N6nMYp4Hl_SCPJJCbzJ8rAb4D56homkhgKXffwVOKmgFenLRxUc7pQ2O0MZ7v68yn7OYAIfjY-FMVIZ0fyfEfR1BSJ8H33FVB7c9buQ5IA0TgGec5gItNPp5Iu7G7z1JnQrVvYAWQEpb97PrvUEukf8Q5ue9Qp8DSyflifGfmXsKkRDcNR1fNkWZnGLXkEapXv_atHz_kkiDjW68",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "student_id",
+							"value": "14",
+							"type": "text"
+						},
+						{
+							"key": "mcq_question_paper_id",
+							"value": "29",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/get_mcq_analytics",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"get_mcq_analytics"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/api/get_mcq_results",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIzIiwianRpIjoiNDgzMjI5OTAwYjQwNTk4NzQxZWVjNmNkZGQyMjhmY2U2OTNkYmQyMTY2M2FhNDI5YjAzZTAwM2NiNmFjOThhYTA2OWZmOTBlY2E1MDYxNGYiLCJpYXQiOjE2NTkwODU4MTQuNDQxNDQ2LCJuYmYiOjE2NTkwODU4MTQuNDQxNDU2LCJleHAiOjE2OTA2MjE4MTQuMzM1MzAyLCJzdWIiOiI0MiIsInNjb3BlcyI6W119.G6Y7HtIet5xj16yNfbqDbjkTDwz4R5_nSe1xZ4LSu4QZAhWzaUSF882WfJBfvb6NYziRPpC4KSkl4w2BByLQ71VNW1Zm24uo1Lh34B-lZQ1j1--0BlQp-lb9esoiKUOGvPnG44QVatDpy8Gwae_2crlA7eYzJCTUhIlJglH75RSEwytyr41t7JiSaYvTZpcrxSmvZ-1pceLm9acqIYhes3oRNQ1tQUa2ee9wGXdrKNYRJ1sR4JoF6IqB7-wKcSG1Xwfr_k0ufII7Mpw-Eb9fDRu7v5Cr1f7B1QQVA3CFiQr3iPPIGAmi-xzlv2f5kjFVWGrepWCoHOtjTGUXVB5mqPztEcafNisP3VzEbi4iNeRCuD0xJQ7t8A4IGH6o3seEAPIqk38QX6NzJgjdENUUK9GbBoP0lmwmqNgsWAaOHCSqnHFtjNW5rJeV_FaRitbqVwbeOysxD_LDOAYHuoqtR51bEH0N6nMYp4Hl_SCPJJCbzJ8rAb4D56homkhgKXffwVOKmgFenLRxUc7pQ2O0MZ7v68yn7OYAIfjY-FMVIZ0fyfEfR1BSJ8H33FVB7c9buQ5IA0TgGec5gItNPp5Iu7G7z1JnQrVvYAWQEpb97PrvUEukf8Q5ue9Qp8DSyflifGfmXsKkRDcNR1fNkWZnGLXkEapXv_atHz_kkiDjW68",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "student_id",
+							"value": "14",
+							"type": "text"
+						},
+						{
+							"key": "mcq_question_paper_id",
+							"value": "12",
+							"type": "text"
+						},
+						{
+							"key": "subject_id",
+							"value": "1",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://mediguru.bcompetitive.in/api/get_mcq_results",
+					"protocol": "http",
+					"host": [
+						"mediguru",
+						"bcompetitive",
+						"in"
+					],
+					"path": [
+						"api",
+						"get_mcq_results"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/api/set_live_mcq_results",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIzIiwianRpIjoiZDUyNWU4NGNkNGY2NjJlMzdkODdkMjUyMzRkNmFkNjA4M2JlZmQyMTc3YjIwYWQwNDZlMDJiMzE3Yjk4NGQwODEwM2M5NTUwZDJmMDI0NjciLCJpYXQiOjE2NjY2ODA4MjguODMxNzg4LCJuYmYiOjE2NjY2ODA4MjguODMxNzk0LCJleHAiOjE2OTgyMTY4MjguODI5MDE4LCJzdWIiOiIxNiIsInNjb3BlcyI6W119.E4m6Azf0ZF9FAsZihX7Z_5_7gHxidU6XP603u_2id-G4fIP3Oe2-waZ2w1GK77jbvyH3xuRPpBrVUJMPBbVbEXKmpJdq-5AERXp3DF8l9q7_Pt46yh0VrTpyVTRapBCmiaWqe3eBQxWgskQKS_B23CTZSQOFxcQETQBL61sV4d7ztpXw7ZcRpN_npKeA1_ixXE4NnuIv_ZZYitTg-T0yFDOBS0FbMHqDrQJlY5oAE3ZouZnYzgtZ5GjIzJdBHKRQNbkIB6mvKJ3wrPQ_f-1odx9AHasIXKxp5Eh6RHQikn6BwoH5zquaW1g9e0id-3IbU1iHZ4YfISjIO3BnoCMYTirhmLbMZ-PE4rScwjXILjQuH59Nte4WUZueWMDvU__x2noTrZBJnfieCkls7F9mPVMcWX6lBQxbmOfqbbYfUswP2liD-6imdd1REdR5Gzydg_MhOTF3SocWgzIV0kbOYYpWG43kvXQh4DeK-1SKfaOQEEGvpwG1ON_vAHleHmrhJJ9Unt5W-0x0wzoJoBBjt2FPCsw3CD75rbwh7PHm4mVkE5EH9DmKdSeuCCw0MxmmsEprBFIfWCggg0yddOrC-UdP67WG3SgQDn__rzNAYzQZn3sys5D05b5pC9Yftt7IUbGNTDHoVnrksaRVZPPORdte0mV0QqCQ7mG7ZGjuaxw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "subject_id",
+							"value": "14",
+							"type": "text"
+						},
+						{
+							"key": "mcq_question_paper_id",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "student_id",
+							"value": "4",
+							"type": "text"
+						},
+						{
+							"key": "test_result",
+							"value": "{\"mcq_result\":[{\"question_id\":\"1\",\"answer\":\"2\"},{\"question_id\":\"2\",\"answer\":\"4\"},{\"question_id\":\"3\",\"answer\":\"1\"},{\"question_id\":\"4\",\"answer\":\"3\"},{\"question_id\":\"5\",\"answer\":\"1\"},{\"question_id\":\"6\",\"answer\":\"0\"},{\"question_id\":\"7\",\"answer\":\"0\"},{\"question_id\":\"8\",\"answer\":\"0\"},{\"question_id\":\"9\",\"answer\":\"0\"},{\"question_id\":\"10\",\"answer\":\"0\"}]}",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://mediguru.bcompetitive.in/api/set_live_mcq_results",
+					"protocol": "http",
+					"host": [
+						"mediguru",
+						"bcompetitive",
+						"in"
+					],
+					"path": [
+						"api",
+						"set_live_mcq_results"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/api/get_live_mock_tests",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIzIiwianRpIjoiZGI5NmY4NzNmZTZiOGQ2N2I1Y2FjYTM5ZTY3NDAxZGRkYWQ0YjMwYjFhZGU4MzFhNjViMWQ0NzYzMGRiMjQ5YjFhNDkwNThjMTgwMWJlNGIiLCJpYXQiOjE2ODQzMDA2NjIuMzI1MTY3LCJuYmYiOjE2ODQzMDA2NjIuMzI1MTc4LCJleHAiOjE3MTU5MjMwNjIuMzIwNzY0LCJzdWIiOiIxNiIsInNjb3BlcyI6W119.OFYXpBfohzR2oRcF5J_NwYpb9bWPNg973t0lut5STB3RQkb1ovX0xntdh8kBTy5P2ipBx02Ripo7y_gw2kYOY0xA4mhbPk3nMI3_rCqqrJnKfgvR4c_wZIYPRX9WNr0wwAzfj5fz4Nq4csZrkddb6himM51iAG55VHOmvIzYtcstzQtBrygdbviFI7Y1SCmVHXiPjGJOWKj7U2wnvTCFfozSWJCkAqB8I6yCBc_I6VfTCT_lfdDiyJ2Ft5tMl3mS6XyePrYxzHr06l2QXL-z7CifnrFGVttZZ420MifOxC1Tw1CAAxRI4iNn5-79ONdcLRrelwZgk00bUJID9Qc-Hp9IZCPHT2VY5rggUWcp2NfRswfzg0OKLzNZuC1F4w0KBCu39DGt6PRillw2I_g4V-Ax58sPgjJQR-FciUMv2zG9ocCfedgealBesXyQGfR3i0nnbeAYaj_H2lIIPFEvcR6imZLk3cqxD4JgP1hR24EOepgcksZFxux3u1Rr4t6Br_5dzm4SuRDJRrN-aiLzMhzq5TniFA8nGa18d6TNP73y7rJedCRoGw59399WUMTCWmn0Bm6qKGAdcqSQjPXh28x8q325lEKaD9h1KnzLKxIh2AShgM5o4rJZ0EWCeA02Ue1fSFrxca9G0-E8JybeAmx4lFsmayWSSJsgI1iXpXw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "student_id",
+							"value": "14",
+							"type": "text"
+						},
+						{
+							"key": "mcq_question_paper_id",
+							"value": "12",
+							"type": "text"
+						},
+						{
+							"key": "subject_id",
+							"value": "31",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://mediguru.bcompetitive.in/api/get_live_mcq_results",
+					"protocol": "http",
+					"host": [
+						"mediguru",
+						"bcompetitive",
+						"in"
+					],
+					"path": [
+						"api",
+						"get_live_mcq_results"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/api/get_latest_news",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIzIiwianRpIjoiNzg0NGU3ZDAzZGYxMTczN2UxOGUxMmY4NTQzYmYzNDdkMjU4ZDc2NjMxOTkyYzJhMGVmNzcwOGUzNmUxYzMyYjI5YTdiZDNmM2YxYjVkOWIiLCJpYXQiOjE2NjYxNjQ3MTUuMTk0MzQ5LCJuYmYiOjE2NjYxNjQ3MTUuMTk0MzUyLCJleHAiOjE2OTc3MDA3MTUuMTkxMDY1LCJzdWIiOiIxNiIsInNjb3BlcyI6W119.I_41ihhVA9M9z4A0PWPvUm6cXTJZSywskv3E4sOTDopenBbWBqEs5z-PiX-LDnFR2Mrhfs2_ZgXRgCpUxqMmZARe5cy6ktMOjDvyyv0SFZkttSVeKVOiSAN6NaDh27bGpKTQGBsnQu7V6wMYz58YqkMCrkVJT0zkpC9jDExDW3IFT0Rgk2D4JIsA5_5-4ImE8P22hNgDd_kCO6BFTUE9MDQpt4KsZokmwDY7X46mOftyibp96HmVH5TE6jjb5yCtlkVHiO3X9Pz6EjV6GTG-SLGeOLCGXh4UeEBrXU1nilv_3UlzA4ANQe1vAkcjRt0JRYa1PCOPW6Hg00Y7FhBSYJ78ecPhdJEXA0D0mqyKc7x5jG6tN2NBUywxZoMcIut1tzCQMKq8lh-H78lgIPERO_KqrYxHeoUR9M5rnvJQcY0p48BwN29j-TeKvG4bSoyPjo8RyIboq6U0Lj9x2MzzIPXD1wfgFMZ6PE_AWZJwrX-_SJJuflEQRG3DMhFb08eelTAx8iLVn19_l7fQgHgDAnwLWaKcyMG1Z8DRruzxDzQOwg9VlY5rta8k2qh0TQRFlsDX9bp_aBaxH4WjzDmo7V-1uIIWgRRCtl2tckF6idMFCTZGvynxCiiyIm4Tm8sSA6Jk6DNu3uOzy-qyjaN7cfEd3sX-cnhjfRsyTIiXV_A",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "student_id",
+							"value": "7",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://mediguru.bcompetitive.in/api/get_latest_news",
+					"protocol": "http",
+					"host": [
+						"mediguru",
+						"bcompetitive",
+						"in"
+					],
+					"path": [
+						"api",
+						"get_latest_news"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/api/get_dash_live_mock_tests",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIzIiwianRpIjoiNjA0MWM3ZTJmZTM1NzdkNDk1YWNkMTE0OThkYmQ1YTFmNzczY2U3ZDA0MjE5ZGJkMDdjNTcxN2Y0MWMwMDM0MDM0NmI5ZjUwM2U0NGRlYTIiLCJpYXQiOjE2NzgyNDg4MDcuNTA0MDY2LCJuYmYiOjE2NzgyNDg4MDcuNTA0MDY5LCJleHAiOjE3MDk4NzEyMDcuNDk4ODA1LCJzdWIiOiIxNiIsInNjb3BlcyI6W119.e5p6nSZqPt5Hs4TBQFyByHWTLdLV3OOy_hno7ZjZ05S1By2FiN-N9SuFSQRKGmCPDNeQwBqsvkbK-OUdoJQxIWyWxckJiDQ-T3fRSkuOL6qSZVMq4i-o7fa_s6FVp0M1P5On11aPgg4DWYNFBGS57ouyTRXTv3UQg6lZBaf5fdqWhTPV-ACBbKH4lgrmFuEPafUCik3P-3ka7vvRN9wPm-JpKErIQb56SrYKSaKX3NV8-RZJtGMsad6cPquMWHhmWR1M8HCFjhWM2nrrfHFHoL360O0cSijsAwlL9el348_n8RZZXF77w_AjNWQ8Fj8zd_yP_v48q8VNwT9SnIB_0fqgFoaP1CHWvXGLxQN8lUsiyjH5_e6hfKi2AN3rPxkNl-volelRHO6ZOReK8ueDOiCW_9am_PARGBcOd6wB3ek7kTEdNOy-4ttbzZe5C2FRpJLPoFIn2IitIJYLxwTwngeIj6Ri8z4v12jjbTSjsj80tx9Q0UeoUZwkaoGs46Q1KOrrfCGjOADx-01pqBPaqOMaxN_Fwe8PQAVyPPFnsya_EQRY_4ELQXbKobaWLfV1p0EddxdHa14-QV854kgM6XR5HZvKfeLiE5f8bb1P9Ku5K2QB119KAKjuwcFYsx9K6CiDGxgvFIzAqjAp8tDODGdatyBT6DAM59YQt2b_3KM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "student_id",
+							"value": "14",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://mediguru.bcompetitive.in/api/get_dash_live_mock_tests",
+					"protocol": "http",
+					"host": [
+						"mediguru",
+						"bcompetitive",
+						"in"
+					],
+					"path": [
+						"api",
+						"get_dash_live_mock_tests"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://mediguru.bcompetitive.in/api/set_video_like_dislike",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIzIiwianRpIjoiOWEwMmJjMmQ3YTY2NTFjZDAwODMyNThkNjk5Y2I0MjRjOGZiYmVhMmY0YzdjYmE1NjM5NzJkMDg1Y2JkN2M0NWQxNTRjMjBmMmQwOGViOTciLCJpYXQiOjE2NjE4MzYxMjkuNzcyODEzLCJuYmYiOjE2NjE4MzYxMjkuNzcyODE4LCJleHAiOjE2OTMzNzIxMjkuNzY4NjQ0LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.F2ushSkJz37tfxpXngXo3GsRKY2zsZ3ziEAsi9HLRsSdMmbXcB2U0k-Jdjt7jT3beTOEBU1hiBHjK27iOeoqazVpS9eECPk_akdbAh_BI6RhV18gZ9PX6wdUpDHzJrpTIExgpsNQGZH9BMSIO-s9JA7DI_CFdozAxxPFuigz4CvFJWxnjp5X2TGaDCf3GOgvFtkyVWmFbMrABVtC_cYIf6ocmuPvCJ3B6mWc-cdie549Y-6f8u6fBDw4PuruCKpTcfr3rQ9148zy_BJw3sN61409QXUXwuxjfKnDhqwmfhCc-BkUMjWV9RlWD-raazjcpZ_ONk53J01OCQOfPRulr-mk_U1RC7yuPt6-MOFmkG46pUMgaGWqXl9deYqlJiGWKEshRbIxM9NV3h6aCOh6G0auHJyZBFxo1ileLYp4f-ta9K0ra2sq1Ghcu9Acf8bXfzXV56k6lwLWOwUjIncy_MOipC8n_I5Pyfcbv1s5XXlK9rbQ69wfGeiuu_h08YI_8YEl9m3c9YBO0urxLx3XSZKC6ILjkpOLWqilztheNBTUyQ_T3MtEw9eNyfXiWBcQaMEnQEoGPpXwF1kf2Y8jxtZBYp41ZBbApombk4QDb8j_tpFNZ2R8a-JjBE5dhoOHo07q83lCaQC5-mXeahbSainKWEBFSe4kc_jhUdlJ0Vg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "student_id",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "like",
+							"value": "0",
+							"type": "text"
+						},
+						{
+							"key": "dislike",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "video_unique_id",
+							"value": "3876",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://mediguru.bcompetitive.in/api/set_video_like_dislike",
+					"protocol": "http",
+					"host": [
+						"mediguru",
+						"bcompetitive",
+						"in"
+					],
+					"path": [
+						"api",
+						"set_video_like_dislike"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://mediguru.bcompetitive.in/api/set_video_feedbacks",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIzIiwianRpIjoiOWEwMmJjMmQ3YTY2NTFjZDAwODMyNThkNjk5Y2I0MjRjOGZiYmVhMmY0YzdjYmE1NjM5NzJkMDg1Y2JkN2M0NWQxNTRjMjBmMmQwOGViOTciLCJpYXQiOjE2NjE4MzYxMjkuNzcyODEzLCJuYmYiOjE2NjE4MzYxMjkuNzcyODE4LCJleHAiOjE2OTMzNzIxMjkuNzY4NjQ0LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.F2ushSkJz37tfxpXngXo3GsRKY2zsZ3ziEAsi9HLRsSdMmbXcB2U0k-Jdjt7jT3beTOEBU1hiBHjK27iOeoqazVpS9eECPk_akdbAh_BI6RhV18gZ9PX6wdUpDHzJrpTIExgpsNQGZH9BMSIO-s9JA7DI_CFdozAxxPFuigz4CvFJWxnjp5X2TGaDCf3GOgvFtkyVWmFbMrABVtC_cYIf6ocmuPvCJ3B6mWc-cdie549Y-6f8u6fBDw4PuruCKpTcfr3rQ9148zy_BJw3sN61409QXUXwuxjfKnDhqwmfhCc-BkUMjWV9RlWD-raazjcpZ_ONk53J01OCQOfPRulr-mk_U1RC7yuPt6-MOFmkG46pUMgaGWqXl9deYqlJiGWKEshRbIxM9NV3h6aCOh6G0auHJyZBFxo1ileLYp4f-ta9K0ra2sq1Ghcu9Acf8bXfzXV56k6lwLWOwUjIncy_MOipC8n_I5Pyfcbv1s5XXlK9rbQ69wfGeiuu_h08YI_8YEl9m3c9YBO0urxLx3XSZKC6ILjkpOLWqilztheNBTUyQ_T3MtEw9eNyfXiWBcQaMEnQEoGPpXwF1kf2Y8jxtZBYp41ZBbApombk4QDb8j_tpFNZ2R8a-JjBE5dhoOHo07q83lCaQC5-mXeahbSainKWEBFSe4kc_jhUdlJ0Vg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "student_id",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "video_unique_id",
+							"value": "4567",
+							"type": "text"
+						},
+						{
+							"key": "comment",
+							"value": "this is testing",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://mediguru.bcompetitive.in/api/set_video_feedbacks",
+					"protocol": "http",
+					"host": [
+						"mediguru",
+						"bcompetitive",
+						"in"
+					],
+					"path": [
+						"api",
+						"set_video_feedbacks"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://mediguru.bcompetitive.in/api/set_general_feedbacks",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIzIiwianRpIjoiYTBjYmRlZDI1YWNiYjZlYjhjNTQxYmFhMDdlY2M0MmFjM2Q2YzVmYWJhMGYzMjUyNWNiOTUwMDAxNzIzNzc2YWQxMTVkNmJhZDdhOWMyM2EiLCJpYXQiOjE2NjIwMTEzMDYuNjUyMjI3LCJuYmYiOjE2NjIwMTEzMDYuNjUyMjI5LCJleHAiOjE2OTM1NDczMDYuNjQ3NjgxLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.hfp5HN9Q2PMbDsZCN9iypKpQC-fpQ0yCoY572WXLBTO2rDbv9niBwtGIc10XbiPhqkt9UC4uznYsDB7GDbd4Jk9vU-PbRgYMe4a-i-QK7v9ZbNyiwKAAyuFVwUwTjk3Qhk7bEH_1qzTtG3BoJoNzeZQxyqsiW3_3zoO_vlfXpdx_RNOqRjQaVE2P2y6c1nXvEJyfKHCIR-IDhAL5ehulaDnDPTFPT5BA3hIUNqsNBsUZcR7Z2urFeBV4lWLhFkK9EK96NGciJJj0fXSeBqwcmfcTt7gxW1mI5bQSO2J9ulz6IQ0qEJxP41vPNNgR8DdKyZpaCSfLLlcU8h3fNc_sBRuyHKkw7V21eqA1Y7hN6_Pu-jNUGvH8wmfPel3RjWOTQUbXpowl4DHgGoa0wEPICJJBErRgv-xlVXip9Q0p3C6fpVmEefRt-piCltxzKG1FEHXkrOThwb8wlNFWhJUVUlKGXSSCapUkh8eJnxngSSOIyXz10wf-QRJWACsufqSWPpqLbpCj1x_CJyJUU4lWTz4loW42A_ptfI_q_ZcGlo3Qp_lZkxOO_MXqTx_NLidURha9Ruw53QU3VsnK-IjFub6Ok7-QCY9hhSZAJYzUxNY6RgCzJTwr2XvjI94jJslXWI7P_gNKEoWiU9n8P_LTo_JaTIh3dHdasumMSw-PjcQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "ssss",
+							"type": "text"
+						},
+						{
+							"key": "mobile",
+							"value": "4213154545",
+							"type": "text"
+						},
+						{
+							"key": "comment",
+							"value": "dsaasd dsadsad sadasdasd sa",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://mediguru.bcompetitive.in/api/set_general_feedbacks",
+					"protocol": "http",
+					"host": [
+						"mediguru",
+						"bcompetitive",
+						"in"
+					],
+					"path": [
+						"api",
+						"set_general_feedbacks"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://mediguru.bcompetitive.in/api/get_notifications",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIzIiwianRpIjoiY2M0ZjljMDk0ZTliY2FmOWJmNGI4NjMyODMzYzJmN2U2MjlhNGUxZDU3ODYzYWIwMGQ0ZjlkZmVhMDIyMzY5ZGVkNzcwNzdkNjJhMTUzMTciLCJpYXQiOjE2NjY4Njc3OTAuNzE1OTYxLCJuYmYiOjE2NjY4Njc3OTAuNzE1OTY0LCJleHAiOjE2OTg0MDM3OTAuNzExNjQ0LCJzdWIiOiIxNiIsInNjb3BlcyI6W119.qvB3jRubCJliLXS3jB4qjW_GuFlTn8lMsnaEHF_Osn2Lw5etYqGgkq_5hUYKcxBW4yuUiqbdv2JWdg_Tv4cqMpg6jgw3o63IqHBM3QxlySv6Fz_HR1H0D8_bLH3QxRZdoodIDu4YViEzCGOpsDJuaV3hmhsoftNJ7_m6YlC28X_nXpQRUsWz9vZGIIqv0cOB36bWp97W8mr3xza2-whtNfgr0h2-PqndddEfNWlZAIH5gPR9TXvfu4IgAHLiaEaUZlKS8EmWaGDxdXWRDEQw7tbuj11DxxsTc-sqBXB_2OLXnNJle7YFkJ9PYNAt9dop5_QJoYWGgWDPQqwuHMS52afrKPWsKnj4ghsQ3WDV61VFngklPVJ5MbVZDmGo38ky_qlAj1ojJgVs0XnQ8MLHkQrKmGOimUzFdvJDbB0I6-KNHD4MBekufl7kBynijylxWmkBMqKcAFtKzs-gGpkViz0RrEnFTxtxSk_ON88eSX8O7SrRVc88OmXC9x8escW2RGGVBSJeQybYUPx4m7bIMMsiMA5VF06WjpPrPp5Krzuzjmyi_UefEOV-A6m_bdNeXchiF1eJl7G4rd1wOq8E-l11f2eN0XRLTiyrV5CzDVpBYKcETYzRpQ2GD9l_kTmmkacssbaoXze-2nYrKxLlPy9DQl4rWLTA31IrXTIPtG0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "student_id",
+							"value": "14",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://mediguru.bcompetitive.in/api/get_notifications",
+					"protocol": "http",
+					"host": [
+						"mediguru",
+						"bcompetitive",
+						"in"
+					],
+					"path": [
+						"api",
+						"get_notifications"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://mediguru.bcompetitive.in/api/get_chat_messages",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIzIiwianRpIjoiYWY5ZDE2ZjE0ZTE5MjQ3MjJjYThhYzc4YTZmODljMjhhZjQ5MDIyMjk3OWVhYmUyZjVjOWE2ZDNlNzM4ZTJkMmY0NzhlZmZmZWM1ZTI1YjAiLCJpYXQiOjE2NjY5NTgzMDMuMDM1Mjc5LCJuYmYiOjE2NjY5NTgzMDMuMDM1MjgzLCJleHAiOjE2OTg0OTQzMDMuMDMxMTEyLCJzdWIiOiIxNiIsInNjb3BlcyI6W119.UK4midBjRKIIyWEUOl4skHh042gSTGDwrDHKOSqieukiQ6aiPEFljeiZsZGPqVR0fr2AYd-wx8HlBUpguyOrbo3AwYMBV90K1KdVk3LGdBCNzY6xyg9Avyj2vzU35N-eftIYLH3mFvd5WMyioWGV_EVip3SI1y69I50JmTR3kfnw903nl8OsB-PZ5t7SKZpBVQOtdrn3Tgyatz4TZKB1A30Xop06lq_wUYlMAkYO6pp60PmxQMi95GeUPy0URIY0zDohNVlxY6NsGZ1tEL_ZPkrElO6Q4aartMzV8B0aCF5QOWr4EKJZa_LulTY2vtjXROBfB325dwca2yKwiWu39TGxcNsjhVMZ3LlVx6eY5PqXoErTUqfBAvQU2vNDf6A1UhOy2kAYZMMIHmZbDUSKj2KaUjeKjfyYDLyh0iYu__bn6DsD6mQqOaKCS8-rbKgnKMqq2pey3Yq695qRvtG-DQkuLJljpNZXHmoMeh7XHot04wqS1I--gUbIe02xVWgkicQbpf4l8Oy9CcNplFf-tal5kg9I6ljzWMLHGRca_bEs-DeC4NF3bosGOYZ3MFyRxSHbSKEB7x7stl1x7surSNTOgCPgcqrbXnoz6AP_ZT8iOQ4-rgmTvitFxAj7fb0nKWu61coNnMGlvAFLNS2NhoomVAs64pfViN4ntGfAr7Y",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "student_id",
+							"value": "73",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://mediguru.bcompetitive.in/api/get_chat_messages",
+					"protocol": "http",
+					"host": [
+						"mediguru",
+						"bcompetitive",
+						"in"
+					],
+					"path": [
+						"api",
+						"get_chat_messages"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://mediguru.bcompetitive.in/api/add_chat_messages",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIzIiwianRpIjoiYWY5ZDE2ZjE0ZTE5MjQ3MjJjYThhYzc4YTZmODljMjhhZjQ5MDIyMjk3OWVhYmUyZjVjOWE2ZDNlNzM4ZTJkMmY0NzhlZmZmZWM1ZTI1YjAiLCJpYXQiOjE2NjY5NTgzMDMuMDM1Mjc5LCJuYmYiOjE2NjY5NTgzMDMuMDM1MjgzLCJleHAiOjE2OTg0OTQzMDMuMDMxMTEyLCJzdWIiOiIxNiIsInNjb3BlcyI6W119.UK4midBjRKIIyWEUOl4skHh042gSTGDwrDHKOSqieukiQ6aiPEFljeiZsZGPqVR0fr2AYd-wx8HlBUpguyOrbo3AwYMBV90K1KdVk3LGdBCNzY6xyg9Avyj2vzU35N-eftIYLH3mFvd5WMyioWGV_EVip3SI1y69I50JmTR3kfnw903nl8OsB-PZ5t7SKZpBVQOtdrn3Tgyatz4TZKB1A30Xop06lq_wUYlMAkYO6pp60PmxQMi95GeUPy0URIY0zDohNVlxY6NsGZ1tEL_ZPkrElO6Q4aartMzV8B0aCF5QOWr4EKJZa_LulTY2vtjXROBfB325dwca2yKwiWu39TGxcNsjhVMZ3LlVx6eY5PqXoErTUqfBAvQU2vNDf6A1UhOy2kAYZMMIHmZbDUSKj2KaUjeKjfyYDLyh0iYu__bn6DsD6mQqOaKCS8-rbKgnKMqq2pey3Yq695qRvtG-DQkuLJljpNZXHmoMeh7XHot04wqS1I--gUbIe02xVWgkicQbpf4l8Oy9CcNplFf-tal5kg9I6ljzWMLHGRca_bEs-DeC4NF3bosGOYZ3MFyRxSHbSKEB7x7stl1x7surSNTOgCPgcqrbXnoz6AP_ZT8iOQ4-rgmTvitFxAj7fb0nKWu61coNnMGlvAFLNS2NhoomVAs64pfViN4ntGfAr7Y",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "student_id",
+							"value": "14",
+							"type": "text"
+						},
+						{
+							"key": "message",
+							"value": "welcome ddsdd",
+							"type": "text"
+						},
+						{
+							"key": "image",
+							"type": "file",
+							"src": "/C:/Users/Administrator/Pictures/aa6.png"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://mediguru.bcompetitive.in/api/v2/add_chat_messages",
+					"protocol": "https",
+					"host": [
+						"mediguru",
+						"bcompetitive",
+						"in"
+					],
+					"path": [
+						"api",
+						"v2",
+						"add_chat_messages"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://mediguru.bcompetitive.in/api/set_dash_live_mcq_results",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIzIiwianRpIjoiZDUyNWU4NGNkNGY2NjJlMzdkODdkMjUyMzRkNmFkNjA4M2JlZmQyMTc3YjIwYWQwNDZlMDJiMzE3Yjk4NGQwODEwM2M5NTUwZDJmMDI0NjciLCJpYXQiOjE2NjY2ODA4MjguODMxNzg4LCJuYmYiOjE2NjY2ODA4MjguODMxNzk0LCJleHAiOjE2OTgyMTY4MjguODI5MDE4LCJzdWIiOiIxNiIsInNjb3BlcyI6W119.E4m6Azf0ZF9FAsZihX7Z_5_7gHxidU6XP603u_2id-G4fIP3Oe2-waZ2w1GK77jbvyH3xuRPpBrVUJMPBbVbEXKmpJdq-5AERXp3DF8l9q7_Pt46yh0VrTpyVTRapBCmiaWqe3eBQxWgskQKS_B23CTZSQOFxcQETQBL61sV4d7ztpXw7ZcRpN_npKeA1_ixXE4NnuIv_ZZYitTg-T0yFDOBS0FbMHqDrQJlY5oAE3ZouZnYzgtZ5GjIzJdBHKRQNbkIB6mvKJ3wrPQ_f-1odx9AHasIXKxp5Eh6RHQikn6BwoH5zquaW1g9e0id-3IbU1iHZ4YfISjIO3BnoCMYTirhmLbMZ-PE4rScwjXILjQuH59Nte4WUZueWMDvU__x2noTrZBJnfieCkls7F9mPVMcWX6lBQxbmOfqbbYfUswP2liD-6imdd1REdR5Gzydg_MhOTF3SocWgzIV0kbOYYpWG43kvXQh4DeK-1SKfaOQEEGvpwG1ON_vAHleHmrhJJ9Unt5W-0x0wzoJoBBjt2FPCsw3CD75rbwh7PHm4mVkE5EH9DmKdSeuCCw0MxmmsEprBFIfWCggg0yddOrC-UdP67WG3SgQDn__rzNAYzQZn3sys5D05b5pC9Yftt7IUbGNTDHoVnrksaRVZPPORdte0mV0QqCQ7mG7ZGjuaxw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "student_id",
+							"value": "4",
+							"type": "text"
+						},
+						{
+							"key": "mcq_question_paper_id",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "test_result",
+							"value": "{\"mcq_result\":[{\"question_id\":\"1\",\"answer\":\"2\"},{\"question_id\":\"2\",\"answer\":\"4\"},{\"question_id\":\"3\",\"answer\":\"1\"},{\"question_id\":\"4\",\"answer\":\"3\"},{\"question_id\":\"5\",\"answer\":\"1\"},{\"question_id\":\"6\",\"answer\":\"0\"},{\"question_id\":\"7\",\"answer\":\"0\"},{\"question_id\":\"8\",\"answer\":\"0\"},{\"question_id\":\"9\",\"answer\":\"0\"}]}",
+							"type": "text"
+						},
+						{
+							"key": "total_time",
+							"value": "100",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://mediguru.bcompetitive.in/api/set_dash_live_mcq_results",
+					"protocol": "http",
+					"host": [
+						"mediguru",
+						"bcompetitive",
+						"in"
+					],
+					"path": [
+						"api",
+						"set_dash_live_mcq_results"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://mediguru.bcompetitive.in/api/get_latest_news",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIzIiwianRpIjoiYjk5YWFmZThlMzc0OWUxMTNiNzMzZjNjNTg4NTY0Y2EzYmIwMDI5NzhkMTRkNDA4YjM5OTUyY2JmZjZiZjc5MDEwNzVlYmI1ZmVmNDEzZTkiLCJpYXQiOjE2NzUxMzg2NTAuNTUzODQyLCJuYmYiOjE2NzUxMzg2NTAuNTUzODQ1LCJleHAiOjE3MDY2NzQ2NTAuNTQ3Mzc5LCJzdWIiOiIxNiIsInNjb3BlcyI6W119.FXnnic3U0HgfRg8k7UQ4xuWeWxha2OlFKhIDzyV8cv4oqjrQLBUpKDIfQyDTONmOoLVaKELSo6cgqo-vWFuQgJMl4T_fJpZNCy_llTsN837REGdhu8dNUqfATbjVd78F9WQFg-Jxi14prCvN7BAZQGTWI9d6x3ZaR30dM-Lif2BxVSSOsilNCGxL6IxMosddJgrcFxqb9P2aor8owkhL6cisxy69UqEknnrt3siN2NLY-IraJxHvywoHHizPm8JE-x9k9P0NuXUJMFwMAqodSr_ylrnKGdY8j1ryCLrMmuAFY4HGzmxNLfNDSUbWrAjuu17SuiNz6x0P579BNNNutsoh1M070OaU7BQKuERBuEcBUcZtBzBaVuSRYSeMKnAUOpLL9ZiWq0oJTPvyQHBCYMsQzYAtILAYAG_jkmj9l6_bNk4tBEpDaMKOiny_zn77Fv4VUkX6Rihyyg-utqlTLSRVU8fXN-nvQbDhuYfzy5O7JbW9G05u5G3fFqMGXVn-QukIfYWPCX7KnWBqbZ3bzBXysFFD3XtwPddSQbKS7tm4SZxcxvvV0HKH-GPzY7LzaH8km6hHJB72vGzNlC6eC1F8CBWjd10wuf8x1pXB--Ffs4-rLGxbV7bZmXzW3orBktbPLiqB4WKR3n5mOfiLcBjXHxiTFtZJQuLRZtY7jMw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "student_id",
+							"value": "1",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://mediguru.bcompetitive.in/api/get_latest_news",
+					"protocol": "http",
+					"host": [
+						"mediguru",
+						"bcompetitive",
+						"in"
+					],
+					"path": [
+						"api",
+						"get_latest_news"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://mediguru.bcompetitive.in/api/get_course_schedule",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIzIiwianRpIjoiMzQ4YjliMGVhNDMxYzVkYTg0YWU2MDBiZDIwYzQ3YzVmZGEzZjY2NzRjNjVjM2RkNGJhNDUyNWNmNmZlNGE2OGM1MWY4YmEwMTQ0NTc3ZjEiLCJpYXQiOjE2NzgxODcwMTQuODk0MDk5LCJuYmYiOjE2NzgxODcwMTQuODk0MTAyLCJleHAiOjE3MDk4MDk0MTQuODkxNDIsInN1YiI6IjE2Iiwic2NvcGVzIjpbXX0.d2i2l_rLKK_0Fy-bd30y5nRwYj0GQJJQcE53ar7tSsScwIDuR_8JI29QkOOyCVoI8nYRT3Q9YRRcOg0eu07BhBeBBGpTVnVJNb3iLOR_MZYoW7n4oqrPg-Ih6v00FD_6xpGZO7Br1jc32Sz6t9fMKHSRiG2WrPRfZ1Hv02N2gexLxBZihEzpqUKinUdONau70kwU8CN-G5xmYS8kkJAKsbfcP0GA2vpbM81_bihDZad0qtRQr3mImLLofUkFaFpDl6XjnK8dIyvwbJAwQNpO2ZdZFVgnOOI0nfXn1RhHTphEWwOaYWtYXVOhq4u_1o_VzrqpYJRYqTsCLpV_sZQkR-Tlx7Y7pztVhZb-s5cZJEL-giCu4YZo9YRfN5L48Nh_uDMilLS9hYIXo0CONjWse0CL9xp6svPKU3vBs1rOVHi8PsM32nmf0c6D-gZG8KDNnHMFGYF8oXHpVTPQ5ean_kKnVAbLfrirO9kRyihl3BkuHCuZ99RzqHvAhRnqLzTx3bOjNo4fSre3COjhKQ_UebjLw4Ts_b5OBVG9L3PTw7oiGOcmIrrUwFV7fxqiAgdppermv3dPtndTgafDQnGNeIT8tsbOwWhLLWOHw3vkyfvibwOATpjsEGJKArt2rPsofzoMeqrPCxUcnzxVOXjKJ2kM98C_PyANCZJWx_NSw7I",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "course_unique_id",
+							"value": "4563",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://mediguru.bcompetitive.in/api/get_course_schedule",
+					"protocol": "http",
+					"host": [
+						"mediguru",
+						"bcompetitive",
+						"in"
+					],
+					"path": [
+						"api",
+						"get_course_schedule"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://mediguru.bcompetitive.in/api/remove_user_account",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIzIiwianRpIjoiOTEyMTRhNWQ1ZTk3ODdlZGRmM2UxYWQ1NTNlZGM3NTNjMjk3N2U3YjViNGZlNzcxYzM3ODdiY2E5M2NkMTRkMmE1ODNhZjBjNmYxMzA3MjEiLCJpYXQiOjE2ODA4NjQ1ODUuMTU0OTQ0LCJuYmYiOjE2ODA4NjQ1ODUuMTU0OTQ4LCJleHAiOjE3MTI0ODY5ODUuMTUwNDE4LCJzdWIiOiIxMyIsInNjb3BlcyI6W119.MYMaMHDfhypbLujes3wqukeydY_JS1RJKnKh8ZDq06yFfMzFW4ryOMAu2dcBuuE8x6AM1caoN_uRCAAhUeE5VKr1m25dtEgHuEVTaoLxm4c7Wo-235gX8o7QIz8JzPRjQmQvnPM61T-eHxXLcziuePKTh6EUyX-zWEx7LTzuN0-OOlFFM6jbi2vp8r1Ma2XMk5RuIVo5RJRngjWxBDmNTbI5DnuFQjMcClJ1mw5OPF5dgwFVLK1Idc4GfzF0fdt3XGFJGTMODGWqj3Y3MgsOpKPdTjvf_2dpZYhaxBw7TUbv5eXZykY1XpXSBn71fE9jXcbQBoZGs4_LYxguBcSG8HHUjyj_5-7jaPOlb5G3sYtf3T_2h0vKqCfkPE7lpM6muaTubiFHznijpi9d2hZuGHzc5_4-t7Nrdegm3Tm7ET4CYMBZG7qG6fjuuzghgEidfbpLSmDMXk2G1Ug4EY-ryNF0xpY1Edefh45VK50OR8H3HDdpO73myC4BsAiu9iDKSBxp5xtOrKcQ9cwfKR31EuZtnDHnoWfpkyTBEw0ymzhY0qA5G1o2VFvGaMS2_XZKyglkX2wgoOdzrmv04xIgDXDOnbng4CFzzYR18ytYolKxqoyH2q16ywu3WkDT6ACO-8lus-wfMsamQYKnP8y7y4_XbAQm5FQhtU51tbuMKlg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "mobile",
+							"value": "123456987",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://mediguru.bcompetitive.in/api/remove_user_account",
+					"protocol": "http",
+					"host": [
+						"mediguru",
+						"bcompetitive",
+						"in"
+					],
+					"path": [
+						"api",
+						"remove_user_account"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://mediguru.bcompetitive.in/api/get_live_mcq_results",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIzIiwianRpIjoiZGI5NmY4NzNmZTZiOGQ2N2I1Y2FjYTM5ZTY3NDAxZGRkYWQ0YjMwYjFhZGU4MzFhNjViMWQ0NzYzMGRiMjQ5YjFhNDkwNThjMTgwMWJlNGIiLCJpYXQiOjE2ODQzMDA2NjIuMzI1MTY3LCJuYmYiOjE2ODQzMDA2NjIuMzI1MTc4LCJleHAiOjE3MTU5MjMwNjIuMzIwNzY0LCJzdWIiOiIxNiIsInNjb3BlcyI6W119.OFYXpBfohzR2oRcF5J_NwYpb9bWPNg973t0lut5STB3RQkb1ovX0xntdh8kBTy5P2ipBx02Ripo7y_gw2kYOY0xA4mhbPk3nMI3_rCqqrJnKfgvR4c_wZIYPRX9WNr0wwAzfj5fz4Nq4csZrkddb6himM51iAG55VHOmvIzYtcstzQtBrygdbviFI7Y1SCmVHXiPjGJOWKj7U2wnvTCFfozSWJCkAqB8I6yCBc_I6VfTCT_lfdDiyJ2Ft5tMl3mS6XyePrYxzHr06l2QXL-z7CifnrFGVttZZ420MifOxC1Tw1CAAxRI4iNn5-79ONdcLRrelwZgk00bUJID9Qc-Hp9IZCPHT2VY5rggUWcp2NfRswfzg0OKLzNZuC1F4w0KBCu39DGt6PRillw2I_g4V-Ax58sPgjJQR-FciUMv2zG9ocCfedgealBesXyQGfR3i0nnbeAYaj_H2lIIPFEvcR6imZLk3cqxD4JgP1hR24EOepgcksZFxux3u1Rr4t6Br_5dzm4SuRDJRrN-aiLzMhzq5TniFA8nGa18d6TNP73y7rJedCRoGw59399WUMTCWmn0Bm6qKGAdcqSQjPXh28x8q325lEKaD9h1KnzLKxIh2AShgM5o4rJZ0EWCeA02Ue1fSFrxca9G0-E8JybeAmx4lFsmayWSSJsgI1iXpXw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "mcq_question_paper_id",
+							"value": "12",
+							"type": "text"
+						},
+						{
+							"key": "student_id",
+							"value": "14",
+							"type": "text"
+						},
+						{
+							"key": "subject_id",
+							"value": "31",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://mediguru.bcompetitive.in/api/get_live_mcq_results",
+					"protocol": "http",
+					"host": [
+						"mediguru",
+						"bcompetitive",
+						"in"
+					],
+					"path": [
+						"api",
+						"get_live_mcq_results"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://mediguru.bcompetitive.in/api/get_live_mcq_results",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIzIiwianRpIjoiZGI5NmY4NzNmZTZiOGQ2N2I1Y2FjYTM5ZTY3NDAxZGRkYWQ0YjMwYjFhZGU4MzFhNjViMWQ0NzYzMGRiMjQ5YjFhNDkwNThjMTgwMWJlNGIiLCJpYXQiOjE2ODQzMDA2NjIuMzI1MTY3LCJuYmYiOjE2ODQzMDA2NjIuMzI1MTc4LCJleHAiOjE3MTU5MjMwNjIuMzIwNzY0LCJzdWIiOiIxNiIsInNjb3BlcyI6W119.OFYXpBfohzR2oRcF5J_NwYpb9bWPNg973t0lut5STB3RQkb1ovX0xntdh8kBTy5P2ipBx02Ripo7y_gw2kYOY0xA4mhbPk3nMI3_rCqqrJnKfgvR4c_wZIYPRX9WNr0wwAzfj5fz4Nq4csZrkddb6himM51iAG55VHOmvIzYtcstzQtBrygdbviFI7Y1SCmVHXiPjGJOWKj7U2wnvTCFfozSWJCkAqB8I6yCBc_I6VfTCT_lfdDiyJ2Ft5tMl3mS6XyePrYxzHr06l2QXL-z7CifnrFGVttZZ420MifOxC1Tw1CAAxRI4iNn5-79ONdcLRrelwZgk00bUJID9Qc-Hp9IZCPHT2VY5rggUWcp2NfRswfzg0OKLzNZuC1F4w0KBCu39DGt6PRillw2I_g4V-Ax58sPgjJQR-FciUMv2zG9ocCfedgealBesXyQGfR3i0nnbeAYaj_H2lIIPFEvcR6imZLk3cqxD4JgP1hR24EOepgcksZFxux3u1Rr4t6Br_5dzm4SuRDJRrN-aiLzMhzq5TniFA8nGa18d6TNP73y7rJedCRoGw59399WUMTCWmn0Bm6qKGAdcqSQjPXh28x8q325lEKaD9h1KnzLKxIh2AShgM5o4rJZ0EWCeA02Ue1fSFrxca9G0-E8JybeAmx4lFsmayWSSJsgI1iXpXw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "mcq_question_paper_id",
+							"value": "29",
+							"type": "text"
+						},
+						{
+							"key": "subject_id",
+							"value": "32",
+							"type": "text"
+						},
+						{
+							"key": "student_id",
+							"value": "14",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/get_live_mcq_results",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"get_live_mcq_results"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://mediguru.bcompetitive.in/api/get_lesson_items",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIzIiwianRpIjoiZGI5NmY4NzNmZTZiOGQ2N2I1Y2FjYTM5ZTY3NDAxZGRkYWQ0YjMwYjFhZGU4MzFhNjViMWQ0NzYzMGRiMjQ5YjFhNDkwNThjMTgwMWJlNGIiLCJpYXQiOjE2ODQzMDA2NjIuMzI1MTY3LCJuYmYiOjE2ODQzMDA2NjIuMzI1MTc4LCJleHAiOjE3MTU5MjMwNjIuMzIwNzY0LCJzdWIiOiIxNiIsInNjb3BlcyI6W119.OFYXpBfohzR2oRcF5J_NwYpb9bWPNg973t0lut5STB3RQkb1ovX0xntdh8kBTy5P2ipBx02Ripo7y_gw2kYOY0xA4mhbPk3nMI3_rCqqrJnKfgvR4c_wZIYPRX9WNr0wwAzfj5fz4Nq4csZrkddb6himM51iAG55VHOmvIzYtcstzQtBrygdbviFI7Y1SCmVHXiPjGJOWKj7U2wnvTCFfozSWJCkAqB8I6yCBc_I6VfTCT_lfdDiyJ2Ft5tMl3mS6XyePrYxzHr06l2QXL-z7CifnrFGVttZZ420MifOxC1Tw1CAAxRI4iNn5-79ONdcLRrelwZgk00bUJID9Qc-Hp9IZCPHT2VY5rggUWcp2NfRswfzg0OKLzNZuC1F4w0KBCu39DGt6PRillw2I_g4V-Ax58sPgjJQR-FciUMv2zG9ocCfedgealBesXyQGfR3i0nnbeAYaj_H2lIIPFEvcR6imZLk3cqxD4JgP1hR24EOepgcksZFxux3u1Rr4t6Br_5dzm4SuRDJRrN-aiLzMhzq5TniFA8nGa18d6TNP73y7rJedCRoGw59399WUMTCWmn0Bm6qKGAdcqSQjPXh28x8q325lEKaD9h1KnzLKxIh2AShgM5o4rJZ0EWCeA02Ue1fSFrxca9G0-E8JybeAmx4lFsmayWSSJsgI1iXpXw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "lesson_id",
+							"value": "29",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://mediguru.bcompetitive.in/api/get_lesson_items",
+					"protocol": "http",
+					"host": [
+						"mediguru",
+						"bcompetitive",
+						"in"
+					],
+					"path": [
+						"api",
+						"get_lesson_items"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/api/v2/purchase_package",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIzIiwianRpIjoiN2JiMzFhNmI0YWJlNDEwMGQzZjFjOTA5NWJiMGVhYTUyMzVhYWYzY2FiM2I0Yzk0NTk0MmQ5OTAzYmViMWZmNGMyNDhiNTQ0MzY5Mzk3N2QiLCJpYXQiOjE2OTQ2MDgwMzIuNTIxMjcsIm5iZiI6MTY5NDYwODAzMi41MjEyODIsImV4cCI6MTcyNjIzMDQzMi4zMjcsInN1YiI6IjE2Iiwic2NvcGVzIjpbXX0.vGEjqV9Ztb0Y8G0XhtkbpJqulOcfLEz_Hmh7fnGUZImxyKWlbkrjGaghooXFMTo-t9zIoi3uFH2iRKrpsmSPDJqEmqzm6uFLaODb6cH86LI6-LjkKVXk7JHGmC8CWZmj16xJZ_YbIRT05hrIQNersp3_JQp56D__v18KJaxd5QvxC6vZ0G12u-jqLCTCfM2KcMG9KKw--MC8bQGITnIaui-GJVfiN3rcOr_c1AblkoQR-IPlkCu-VRo7TQxG5hvzSHFKU1R_ZlgVQzthygjog6FQT9jWAV_7MXyUc03P49N62h5-1ppAf_3JNve4-xdi6NtUKVw1JrE-Kws7yMaA1hhrrMI93uDGrmZ3Xr4wwR_RaboSj4tkeQL-wqJ3P4bwNSnhJ0mk8f91bUVYJKmLRvlmrF5vqCFgrNw2OOP5X4j7JH3aIHBczASS9Qts1S_e3d139K17KZ3uTtozG2FtuHQ-g5-eOEK_2TrWnRPFmz5PFTcZGp5VQCtDU_5CqfnaQiLc5dcAeQreFXM8e0Cbt_-r8UzMsYvfIz5qM4zQPYf7M-ahLmwyF9nNDRQgEjRi093BupJRrGXaqj9GsuGL6sbc0O4FcRGGuvI4b2TDwurBcWSXefNKej5LJRsIcwUjFfAtqv7LPWoeBdQ3M5V45EmaFSIZbih4B4OTQLUqlIE",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "student_id",
+							"value": "14",
+							"type": "text"
+						},
+						{
+							"key": "course_unique_id",
+							"value": "1235",
+							"type": "text"
+						},
+						{
+							"key": "package_type",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "package_id",
+							"value": "51",
+							"type": "text"
+						},
+						{
+							"key": "payment_id",
+							"value": "32323232322",
+							"type": "text"
+						},
+						{
+							"key": "promocode",
+							"value": "ASD123",
+							"type": "text"
+						},
+						{
+							"key": "promocode_value",
+							"value": "500",
+							"type": "text"
+						},
+						{
+							"key": "referral_code",
+							"value": "0",
+							"type": "text"
+						},
+						{
+							"key": "referral_value",
+							"value": "0",
+							"type": "text"
+						},
+						{
+							"key": "package_rate",
+							"value": "6999",
+							"type": "text"
+						},
+						{
+							"key": "net_amount",
+							"value": "6499",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/v2/purchase_package",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v2",
+						"purchase_package"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/api/v2/single_purchase_package",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/v2/single_purchase_package",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v2",
+						"single_purchase_package"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/api/v2/get_chat_messages",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIzIiwianRpIjoiZDBlYjRlZjk3MGFhY2NlYzRmZDYwMjhmOTQ0ZjI2ZjhmMTg3OTk2MmZkYjkxOGYwNDAzYzFlNmEzMDBmMGEwOWFhNjJmZDQ1MWE4MzY4ZjgiLCJpYXQiOjE2OTU4MTA4NzguMTYyNzE4LCJuYmYiOjE2OTU4MTA4NzguMTYyNzMsImV4cCI6MTcyNzQzMzI3OC4wOTM2NjUsInN1YiI6IjIiLCJzY29wZXMiOltdfQ.Hzd3-RPNMkoG3c-oWouEMqOS2cUyR-LKh-pjD84Xc4Ms79cFsCl1iEpzSlIJH3If5PZ8oqeVerin6Hu3N6bwet66KupT9f95piHVyuNS4_IVpHx1IN3J9PyNTzHKxc9SxYJlsgZIXGKumbF4LoaIy72KhNxnpMbKnkc-VUW0_NSwE7T97cLNTczHcNDLpCVv7pgE4mFmd3cdIejmUqam3vUiAY0lpYfBkk_w4SortHNbowvaNPFmhI_fzEtotIcmSlgWo_SRY_QTJIanQk6Kk-UQRDX8PYhwpCvHjHLzqSVCn6d0uXnoJ7PgvX46oiDpvHlRY46H9VzpToysRD9l2mH7ER-t7zcWwzETInZ_7VV5xf3q26Kl4Aj89jAMmD9kMzayhVAmZQdxUOIuy2353pN13Y42QL1eHUCUbBtzbyIjplLNh0-Gxnswx7yz_ZaiqkJhRCAx0GW92434m71g_72eHh89-Zz3mVtyTgKU2qhn4Rh-ru5gfBGG1N5ie7AUFq59m4N6TaMYMP23qAABBMMeRM-fQa8uZ9gorF4_mupZbI5bn4QYqxuTjZ4WIZwDKTG8-V2dQw_cbXOUPc0fbfOTXDnuiqcid8IaDD7ZU6r1W8sBh_UX5b0yLREA4tH3ClmOZMX82Airw4YTiIRklgs3FExhRt1_dFMKuuTFJPk",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "student_id",
+							"value": "14",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/v2/admin_get_chat_messages",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v2",
+						"admin_get_chat_messages"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/api/v2/add_admin_chat_message",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIzIiwianRpIjoiNWJlZWU1MTc2MjI5MDVmOGJmZDM2ZDIwM2Q3MzkwNWM4NmZhYjI2NGY5NWVmYTU5MDY2ZTE2ZGI1ZWExY2M0ZjcyMGE4Nzg4ZjEwY2EyN2YiLCJpYXQiOjE2OTU5MDE5NjMuMTc1NzY5LCJuYmYiOjE2OTU5MDE5NjMuMTc1NzcyLCJleHAiOjE3Mjc1MjQzNjMuMTcyODUyLCJzdWIiOiIyIiwic2NvcGVzIjpbXX0.Y4r-U4iM1Y9PSXTkCXKFT_9e0dprfnSEfADK37bAP0wn7hdFsZTvjEA3k1PCoRWz56J9K0kFM2vAjybNnFzZwhlnoSN3qpG4_eYVxcyb8ZQ7YBn8YM5AlPj-RJXzG0kdSwT4ofuh93drk7hvQ9mJY45jYZEzP3YTIjHR3IEiWytnWVnRlQnYT7-BACuRRQSzzcj0QOAmW7dx6_B9YSeRqSEzyvbdwzfBOukredDNdunIXnS3609rqQsiGltKPLFaOJRVGu23E-MTN7xO4i38a5Nh52gvICsPdjhUrjJLznymgJsoAGgtAn1AlYDjg4qtPuzwfELFwah9A0AfLuOLgr0MG_IyOEPne39Pr79jT5GJar-ZEi--76ADVVF11m2WuCE-6C-bn2d8SGb_GSEA-ooerAym2dD_C6fM7ERAstFPZoUW4OZE1RouWbBDfQjk2xbEFCTgIx1d_e5AI35YV78wKntM9cjwg_8cEt9ichwJ4hQvf0JvItDgI06LvQ1oNzYu4GRJYaxUdyj6PNOJnSRODr6dtYR6uHftrsMgoDKvVsd71-ve-pPOpH51QUQ_0kqYAr674L02K7mWsL_0sW_pL6ZlGU9Mv2HjDpcO5ZFijd8l5wUBCV7u8G9Loz7Opc7pGBQC0MFOatLueptQxVetKaat-eVftDdm5fosehs",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "student_id",
+							"value": "14",
+							"type": "text"
+						},
+						{
+							"key": "admin_id",
+							"value": "2",
+							"type": "text"
+						},
+						{
+							"key": "message",
+							"value": "this is testing",
+							"type": "text"
+						},
+						{
+							"key": "image_status",
+							"value": "0",
+							"type": "text"
+						},
+						{
+							"key": "image_file",
+							"type": "file",
+							"src": []
+						}
+					]
+				},
+				"url": {
+					"raw": "https://mediguru.bcompetitive.in/api/v2/add_admin_chat_message",
+					"protocol": "https",
+					"host": [
+						"mediguru",
+						"bcompetitive",
+						"in"
+					],
+					"path": [
+						"api",
+						"v2",
+						"add_admin_chat_message"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://mediguru.bcompetitive.in/api/v2/admin_user_login",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "shaji@webqua.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "12345",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://mediguru.bcompetitive.in/api/v2/admin_user_login",
+					"protocol": "https",
+					"host": [
+						"mediguru",
+						"bcompetitive",
+						"in"
+					],
+					"path": [
+						"api",
+						"v2",
+						"admin_user_login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/api/v2/get_ebook_titles",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIzIiwianRpIjoiZWE0MjI5ZTg0MjRiMDllNzNkNDA4ODNmY2IzZmVlZTU2ZmEwYzVhYmJiNjQwZTQ1ZTc2OWM2ZjBmYjZkOTJhZmZkODhkMzQxOWY5YjJmYTYiLCJpYXQiOjE2OTYzOTczMzQuMTQzMjk2LCJuYmYiOjE2OTYzOTczMzQuMTQzMzAxLCJleHAiOjE3MjgwMTk3MzQuMDY2ODE5LCJzdWIiOiIxNiIsInNjb3BlcyI6W119.VjkxPgoE29d1iX7_qDzcKHxOAk3lu4mTeRlbe_IzLm8om_OqP-kVdMolUTcS5liqMOg0uLyfo0D75CHBcu0eym-uNLZY8IOagCgddZ2tYmzHdk39rQkR-rtKxiZ_XpIJ8mShv1iPoHv9x6An_A4I1VXT3RTbruRRkp_6jTThfceRLMawJ0fmdu2dylcSIgSiLiWLuRTCMxil_e0JJ5wsieil3eNbZTlYfe2vHOt5xpL4XncnZnTlFSiWGg8KmJ4b0zUqJE6VdZOZ85ymJiWclaLnrlFZR15sml0r0IJsClUT_wW9HJwMNUHMLrnXBUsDF8AYYsGsq-BqiKKX6Vq0zK8v1Qm9bSaWHKBZKTWr3CYlnzjH6UZeCcVSuHd4T16_VMcgaAkLyb_-pNoMsE9Mv9wgcR7M0DHlCZDSknjjVrdhK0nHsw_MO5JCHkumSGUb2NPtWbhdd2m4Gaxunap0dO3mv9cKZRM3JziK5fnV9ScboGibzUMzAqxUzIBCQH8cHNPCiS2ICSYuylJ1ARyq7P2pSxwQ7dpGHkn3vtCo9PAFhPOKrj_sZ0tov1VJkkfW5MdhzpF86qGVJICPgBRTkr1XkBOxOqFNDwfAc8yEdBRl6s_PtbP-InuiLPTYVQ4Ah_e6Y0fq7HjjCL-SoPGIMf8gDepzT3hvOV8sOBnLh68",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/v2/get_ebook_titles",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v2",
+						"get_ebook_titles"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/api/v2/get_ebook_files",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIzIiwianRpIjoiNDE3NzIwZTMxOGE5NWNmNWFlMmUyYzc2MTlmMDRjNjBkMGMyNmMzYWRkZjc0YjExMzRiNDFhODIwODRlNDVhNTJkZDk4OTExYWFhODRlYzQiLCJpYXQiOjE2OTYzOTgxNDMuMTQ1MDU0LCJuYmYiOjE2OTYzOTgxNDMuMTQ1MDU3LCJleHAiOjE3MjgwMjA1NDMuMTQzMiwic3ViIjoiMTg4MiIsInNjb3BlcyI6W119.AAscYdMxmXLmLHKcvsS9jnyqFyVNaBcJZRnri0v3MgBSBeVaFWskSNzF2FLekrLxE1jxaJxifr-AmEuFdVb-PVvIcLXgdZC-O8c0jF_yQPv0EOmtvwvWHPXSDBxcMslIWKBwbqnAJ0Ne9Z55_wZv66WBSixxR5Mc1w_pKRU8CqBY6OULVYkZ7R-NkJR5d0SiEXuXyz86rtzxaCqE5rjJdStbiI7dSEdj1QSor9r_CrDZzYFR2sXVPt7ae1yBaNT3Ex1_RLinocf4Kq6s8X_Jml523Ax4uLUZcY_lOORScNg6OZ88jyOs9Lq8kVXcwVUzZcvndHSA1lVxRjsJjmitsIjEOb6KEmIo52BD5UGVt3V1HMqvws8ara31LTDE1JUEMZiEhcC6qJWZg7GmHNVjUzGxGIDMO9xuKsqkizJMWyePWizcTCUEPxljfYLYzpaWJzAuThZAqKKUnVl45Ksc8ayXfmT6SfgoKJuEdvY53YNJRcBdzvaeYotZYK3wcbdskVBJKtmaSuOgSacff2TGl8st6Pb5Hm1tnjEIUF-0PJ5CviSXezZvx4VWK_sp1SRBnGUQfXiZtRPi66qP88BsS5uRa8jGe5IZrqJVxTuPu5E2gZ0sgtY_Nc232U_euewYsmRgnWcAyWVZQOcvrZqlMccEDII9biphG92CuivmONc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "ebook_id",
+							"value": "2",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://mediguru.bcompetitive.in/api/v2/get_ebook_files",
+					"protocol": "https",
+					"host": [
+						"mediguru",
+						"bcompetitive",
+						"in"
+					],
+					"path": [
+						"api",
+						"v2",
+						"get_ebook_files"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
