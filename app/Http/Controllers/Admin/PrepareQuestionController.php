@@ -140,8 +140,6 @@ class PrepareQuestionController extends Controller
                 ->make(true);
         }
 	}
-	
-
 
 
     /*public function view_data(Request $request)
