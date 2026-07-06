@@ -100,12 +100,12 @@
 								@endif
 								</td>
 								<td style="width:90px;">
-									<a href="" id="{{$r->id}}" class="edit btn btn-brand btn-elevate btn-circle btn-icon" data-toggle="modal" title="Edit"><i class="fa fa-edit"></i></a> 
-									<a href="{{url('delete_subject').'/'.$r->id}}" id="conf" class="btn btn-danger btn-elevate btn-circle btn-icon" title="Delete"><i class="fa fa-trash"></i></a> 
+									<a href="" id="{{$r->id}}" class="edit btn bt-brand btn-secondary btn-elevate btn-circle btn-icon" data-toggle="modal" title="Edit"><i class="fa fa-edit"></i></a> 
+									<a href="{{url('delete_subject').'/'.$r->id}}" id="conf" class="btn bt-danger btn-secondary btn-elevate btn-circle btn-icon" title="Delete"><i class="fa fa-trash"></i></a> 
 									@if($r->status==1)
-									<a href="{{url('deactivate_subject').'/'.$r->id}}" class="btn btn-warning btn-elevate btn-circle btn-icon" title="Deactivate"><i class="fa fa-times"></i></a> 	
+									<a href="{{url('deactivate_subject').'/'.$r->id}}" class="btn bt-warning btn-secondary btn-elevate btn-circle btn-icon" title="Deactivate"><i class="fa fa-times"></i></a> 	
 									@else
-									<a href="{{url('activate_subject').'/'.$r->id}}" class="btn btn-success btn-elevate btn-circle btn-icon" title="Activate"><i class="fa fa-check"></i></a> 	
+									<a href="{{url('activate_subject').'/'.$r->id}}" class="btn bt-success btn-secondary btn-elevate btn-circle btn-icon" title="Activate"><i class="fa fa-check"></i></a> 	
 									@endif
 								</td>
 							</tr>

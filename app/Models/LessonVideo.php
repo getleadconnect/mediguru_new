@@ -80,7 +80,7 @@ class LessonVideo extends Model
 				$uData['lname'] =$r->lesson_name;
 				$uData['title'] =$r->title;
 			
-				$btn='<a href="#" id="'.$r->id.'" class="btnDel btn btn-danger btn-elevate btn-circle btn-icon" title="Delete"><i class="fa fa-trash"></i></a>&nbsp;'; 
+				$btn='<a href="#" id="'.$r->id.'" class="btnDel btn bt-danger btn-secondary btn-elevate btn-circle btn-icon" title="Delete"><i class="fa fa-trash"></i></a>&nbsp;'; 
 				
 				$uData['action'] = $btn;
 						
@@ -162,18 +162,18 @@ class LessonVideo extends Model
 				if($r->order_no!="")
 				{		
 					$ordn=$r->order_no;
-					$ordn.='&nbsp;<a href="#" id="'.$r->id.'" class="btnOrder btn  btn-elevate btn-circle btn-icon" data-toggle="modal" data-target="#kt_modal_3" style="width:1.75rem;height:1.75rem;" title="Add/Change"><i class="fa fa-edit" style="color:#637ddb;"></i></a>';
+					$ordn.='&nbsp;<a href="#" id="'.$r->id.'" class="btnOrder btn bt-brand btn-secondary btn-elevate btn-circle btn-icon" data-toggle="modal" data-target="#kt_modal_3" style="width:1.75rem;height:1.75rem;" title="Add/Change"><i class="fa fa-edit" style="color:#637ddb;"></i></a>';
 				}
 				else
 				{
-					$ordn='<a href="#" id="'.$r->id.'" class="btnOrder btn  btn-elevate btn-circle btn-icon" data-toggle="modal" data-target="#kt_modal_3" style="width:1.75rem;height:1.75rem;" title="Add/Change"><i class="fa fa-edit" style="color:#637ddb;"></i></a>';
+					$ordn='<a href="#" id="'.$r->id.'" class="btnOrder btn bt-brand btn-secondary btn-elevate btn-circle btn-icon" data-toggle="modal" data-target="#kt_modal_3" style="width:1.75rem;height:1.75rem;" title="Add/Change"><i class="fa fa-edit" style="color:#637ddb;"></i></a>';
 				}
 								
 				$uData['ord'] =$ordn;
 				
 				$uData['dat'] ="<span style='font-size:12px;'>Uid : ".$r->video_unique_id."<br>Vid : <b>".$r->vimeo_id."</b><br>Title : ".$r->title."</span>";
 				
-				$uData['action'] ='<a href="#" id="'.$r->id.'" class="btnDel btn btn-danger btn-elevate btn-circle btn-icon" style="width:1.75rem;height:1.75rem;" title="Delete"><i class="fa fa-trash"></i></a>';
+				$uData['action'] ='<a href="#" id="'.$r->id.'" class="btnDel btn bt-danger btn-secondary btn-elevate btn-circle btn-icon" style="width:1.75rem;height:1.75rem;" title="Delete"><i class="fa fa-trash"></i></a>';
 			    $data[] = $uData;
 			}
         }

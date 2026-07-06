@@ -93,7 +93,7 @@ class SubscriptionController extends Controller
 
 				->addColumn('action',function($row)
 				{
-					return '<a href="'.url('delete_subscription').'/'.$row->id.'" id="conf" class=" btn btn-danger btn-elevate btn-circle btn-icon" title="Delete Package" ><i class="fa fa-trash"></i></a>'; ;
+					return '<a href="'.url('delete_subscription').'/'.$row->id.'" id="conf" class=" btn bt-danger btn-secondary btn-elevate btn-circle btn-icon" title="Delete Package" ><i class="fa fa-trash"></i></a>'; ;
 				})
 				
 				->rawColumns(['action','name','simage','package','date','status'])

@@ -94,7 +94,7 @@ class LessonMaterialsController extends Controller
 					->addColumn('selbtn',function($data)
 					{
 						//return '<input type="checkbox" class="sub_chk" data-id="'.$data['id'].'" style="width:20px;height:20px;" ></label>';
-						return  '<button type="button" class="mselect btn btn-primary btn-sm" title="Add Video" style="padding: 5px 5px 5px 10px;"><i class="fa fa-plus"></i></button>';
+						return  '<button type="button" class="mselect btn btn-primary btn-sm" title="Add Video" style="padding: 3px 3px 3px 8px;"><i class="fa fa-plus"></i></button>';
 					})
                     ->rawColumns(['selbtn'])
                     ->make(true);

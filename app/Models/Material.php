@@ -132,12 +132,12 @@ class Material extends Model
 				$uData['mdata'] ='<a href="#" id="'.$r->id.'" data-toggle="modal" data-target="#kt-modal-1" class="btnData badge badge-primary">View</a>';
 				$uData['status'] =$st;
 				
-				$btn='<a href="#" id="'.$r->id.'" class="edit btn btn-brand btn-elevate btn-circle btn-icon" data-toggle="modal"  title="Edit"><i class="fa fa-edit"></i></a> 
-					 <a href="'.url('delete_material').'/'.$r->id.'" id="conf" class="btn btn-danger btn-elevate btn-circle btn-icon" title="Delete"><i class="fa fa-trash"></i></a>&nbsp;'; 
+				$btn='<a href="#" id="'.$r->id.'" class="edit btn bt-brand btn-secondary btn-elevate btn-circle btn-icon" data-toggle="modal"  title="Edit"><i class="fa fa-edit"></i></a> 
+					 <a href="'.url('delete_material').'/'.$r->id.'" id="conf" class="btn bt-danger btn-secondary btn-elevate btn-circle btn-icon" title="Delete"><i class="fa fa-trash"></i></a>&nbsp;'; 
 				if($r->status==1)
-					  $btn.='<a href="'.url('deactivate_material').'/'.$r->id.'" class="btn btn-warning btn-elevate btn-circle btn-icon" title="Deactivate"><i class="fa fa-times"></i></a>'; 	
+					  $btn.='<a href="'.url('deactivate_material').'/'.$r->id.'" class="btn bt-warning btn-secondary btn-elevate btn-circle btn-icon" title="Deactivate"><i class="fa fa-times"></i></a>'; 	
 				else
-					 $btn.='<a href="'.url('activate_material').'/'.$r->id.'" class="btn btn-success btn-elevate btn-circle btn-icon" title="Activate"><i class="fa fa-check"></i></a>'; 	
+					 $btn.='<a href="'.url('activate_material').'/'.$r->id.'" class="btn bt-success btn-secondary btn-elevate btn-circle btn-icon" title="Activate"><i class="fa fa-check"></i></a>'; 	
 				$uData['action'] = $btn;
 						
 			    $data[] = $uData;

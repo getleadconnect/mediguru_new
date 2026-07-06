@@ -158,7 +158,7 @@ class LiveQuestionPaperController extends Controller
 								//$btn = '<a href="javascript:void(0)" class="edit btn btn-primary btn-sm"> View</a>';
 							})*/
 					
-                    ->rawColumns(['action','qpname','ttime','tdate','status','qpicon'])
+                    ->rawColumns(['action','qpname','ttime','tdate','status','qpicon','marks'])
                     ->make(true);
         }
 	}

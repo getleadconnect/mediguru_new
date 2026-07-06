@@ -252,6 +252,7 @@ $("form#addQpForm").submit(function(e)
 				$("#courseid").val('');
 				$("#subjectid").val('');
 				$("#qp_unique_id").val(''); 
+				table.draw();
 			}
 			else
 			{

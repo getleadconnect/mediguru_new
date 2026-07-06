@@ -137,7 +137,7 @@ class PackagePayment extends Model
 				$uData['prate'] =$r->package_rate;
 				$uData['netamt'] =$r->net_amount;
 				
-				$btn='<a href="'.url('delete_payment').'/'.$r->id.'" id="conf" class=" btn btn-danger btn-elevate btn-circle btn-icon" title="Delete"><i class="fa fa-trash"></i></a>'; 
+				$btn='<a href="'.url('delete_payment').'/'.$r->id.'" id="conf" class=" btn bt-danger btn-secondary btn-elevate btn-circle btn-icon" title="Delete"><i class="fa fa-trash"></i></a>'; 
 				/*if($r->status==1)
 					  $btn.='<a href="'.url('deactivate_student').'/'.$r->id.'" class="btn btn-warning shadow btn-xs sharp mr-1" title="Deactivate"><i class="fa fa-times"></i></a>'; 	
 				else

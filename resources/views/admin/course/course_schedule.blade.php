@@ -128,8 +128,8 @@
 								<a href="#" id="{{ $r->id }}" class="csView kt-badge kt-badge--info  kt-badge--inline kt-badge--pill" data-toggle="modal"  title="View Schedule">More</a>
 								</td>
 								<td width="90px">
-								<a href="#" id="{{ $r->id }}" class="edit btn btn-brand btn-elevate btn-circle btn-icon" data-toggle="modal"  title="Edit"><i class="fa fa-edit"></i></a>
-								<a href="{{url('delete_course_schedule').'/'.$r->id}}" id="conf" class="btn btn-danger btn-elevate btn-circle btn-icon" title="Delete"><i class="fa fa-trash"></i></a> 
+								<a href="#" id="{{ $r->id }}" class="edit btn bt-brand btn-secondary btn-elevate btn-circle btn-icon" data-toggle="modal"  title="Edit"><i class="fa fa-edit"></i></a>
+								<a href="{{url('delete_course_schedule').'/'.$r->id}}" id="conf" class="btn bt-danger btn-secondary btn-elevate btn-circle btn-icon" title="Delete"><i class="fa fa-trash"></i></a> 
 							</td>
 							</tr>
 							@endforeach

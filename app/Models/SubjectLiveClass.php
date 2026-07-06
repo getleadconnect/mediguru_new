@@ -132,13 +132,13 @@ class SubjectLiveClass extends Model
 				$uData['dat'] ="Date: <span style='color:#d519e1;'>".$r->class_date."</span><br>Order:<b>".$r->display_order;
 				$uData['status'] =$st;
 				
-				$btn='<a href="#" id="'.$r->id.'" class="edit btn btn-brand btn-elevate btn-circle btn-icon" data-toggle="modal"  title="Edit"><i class="fa fa-edit"></i></a> 
-					 <a href="#" id="'.$r->id.'" id="conf" class=" btnDel btn btn-danger btn-elevate btn-circle btn-icon" title="Delete"><i class="fa fa-trash"></i></a>'; 
+				$btn='<a href="#" id="'.$r->id.'" class="edit btn bt-brand btn-secondary btn-elevate btn-circle btn-icon" data-toggle="modal"  title="Edit"><i class="fa fa-edit"></i></a> 
+					 <a href="#" id="'.$r->id.'" id="conf" class=" btnDel btn bt-danger btn-secondary btn-elevate btn-circle btn-icon" title="Delete"><i class="fa fa-trash"></i></a>'; 
 				
 				if($r->status==1)
-					  $btn.='&nbsp;<a href="#" rel=2 id="'.$r->id.'" class="act_deact btn btn btn-warning btn-elevate btn-circle btn-icon" title="Deactivate"><i class="fa fa-times"></i></a>'; 	
+					  $btn.='&nbsp;<a href="#" rel=2 id="'.$r->id.'" class="act_deact btn bt-warning btn-secondary btn-elevate btn-circle btn-icon" title="Deactivate"><i class="fa fa-times"></i></a>'; 	
 				else
-					 $btn.='&nbsp;<a href="#" rel=1 id="'.$r->id.'" class="act_deact btn btn btn-success btn-elevate btn-circle btn-icon" title="Activate"><i class="fa fa-check"></i></a>'; 	
+					 $btn.='&nbsp;<a href="#" rel=1 id="'.$r->id.'" class="act_deact btn bt-success btn-secondary btn-elevate btn-circle btn-icon" title="Activate"><i class="fa fa-check"></i></a>'; 	
 
 				$uData['action'] = $btn;
 						

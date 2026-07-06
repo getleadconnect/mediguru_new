@@ -67,6 +67,7 @@
 									<th width="350px">Question paper</th>
 									<th>Course</th>
 									<th width="90px">Time/Date</th>
+									<th width="80px">Marks</th>
 									<!--<th>Instruction</th>-->
 									<th>Status</th>
 									<th width="100px">Action</th>
@@ -127,37 +128,32 @@
 									<input type="text" class="form-control input-default " name="question_paper_name" required>
 							</div>
 
-							
-						</div> <!-- column end --->
-
-					<div class="col-lg-6 col-xl-6 col-xxl-6"> <!--- seond column-->
-
-						<div class="form-group">
-							<div class="row">
-							<div class="col-lg-6 col-xl-6">
-								<label class="col-lg-12 col-xl-12 col-xxl-12">Premium/Free </label>
-								<div class="col-lg-12 col-xl-12 col-xxl-12" style="padding-right:0px;">
+							<div class="form-group" style="width:175px;">
+								<label >Premium/Free </label>
 								<select name="premium" class="form-control" required>
 								<option value="">--select--</option>
 								<option value="0">Free</option>
 								<option value="1">Premium</option>
 								</select>
-								</div>
 							  </div>
+
+							
+						</div> <!-- column end --->
+
+					<div class="col-lg-6 col-xl-6 col-xxl-6"> <!--- seond column-->
+
+							<div class="form-group" style="width:175px;">
 							  
-							<div class="col-lg-6 col-xl-6">
-							  <label class="col-lg-12 col-xl-12 col-xxl-12">Test Time </label>
-							    <div class="col-lg-11 col-xl-11 col-xxl-11" style="padding-right:0px;">
+							  <label >Test Time </label>
 							    <div class="input-group input-primary">
 								   <input type="number" name="test_time" class="form-control" required>
 								  <div class="input-group-append">
 									<span class="input-group-text">/Minutes</span>
 								  </div>
 								</div>
-							  </div>
-							 </div>
+							  
 							</div>
-							</div>
+					
 
 							<div class="form-group">
 							 <div class="row">
@@ -175,17 +171,32 @@
 							</div>
 							
 							<div class="form-group"> 
-							<div class="row">
-							<div class="col-xl-8 col-xxl-8 col-lg-8">
-								<label>Select Icon </label>
-									<input type="file" id="qpaper_icon" class="form-control" name="question_paper_icon" required>
-								</div>
+								<div class="row">
+								<div class="col-xl-8 col-xxl-8 col-lg-8">
+									<label>Select Icon </label>
+										<input type="file" id="qpaper_icon" class="form-control" name="question_paper_icon" required>
+									</div>
 
-							<div class="col-xl-4 col-xxl-4 col-lg-4">
-							    <img src="" id="icon_output" style="width:100px;">
+								<div class="col-xl-4 col-xxl-4 col-lg-4">
+									<img src="" id="icon_output" style="width:70px;">
+								</div>
+								</div>
 							</div>
+
+							<div class="form-group"> 
+								<div class="row">
+									<div class="col-lg-6 col-xl-6 col-xxl-6">
+									<label>Question Mark </label>
+									<input type="text" class="form-control" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" name="question_mark" required>
+									</div>
+								
+									<div class="col-lg-6 col-xl-6 col-xxl-6">
+									<label>Negative Mark </label>
+										<input type="text" class="form-control" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"  name="negative_mark" required>
+									</div>
+								</div>
 							</div>
-							</div>
+
 
 						</div><!-- row end -->
 						</div>
@@ -321,6 +332,7 @@ $('.textarea').summernote();
 			{"data": "qpname" },
 			{"data": "cname" },
 			{"data": "ttime" },
+			{"data": "marks" },
 			/*{"data": "desc" },
 			{"data": "instruct" },*/
 			{"data": "status" },

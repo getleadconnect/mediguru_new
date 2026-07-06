@@ -97,7 +97,7 @@
 					<table id="datatable" class="table table-bordered dt-responsive" style="border-collapse:collapse; border-spacing:0; width:90%;">
 						<thead>
 							<tr>
-								<th width="50px"></th>
+								<th width="30px"></th>
 								<th>Id</th>
 								<th>Subject</th>
 								<th>Image/Question</th>
@@ -145,7 +145,7 @@
 							
 							<label><span>Total Questions:&nbsp;</span><span id="totquestion1" style="font-weight:600;font-size:16px;"> </span></label>
 
-							<div style="overflow-x:scroll;width:330px;max-height:400px;">
+							<div style="overflow-x:scroll;width:100%;max-height:400px;">
 
 								<table style="width:150%" id="tb_questions" border=1>
 								<tr><th>&nbsp;</th><th width="60px">id</th><th>Question</th></tr>
@@ -269,6 +269,7 @@ $(".qpaper_id").change(function()
 		paging     : true,
         pageLength :10,
 		scrollX: true,
+		ordering: false,
 		
 		language: {
                     searchPlaceholder: 'Search',

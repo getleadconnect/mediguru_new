@@ -98,8 +98,8 @@ class Ebook extends Model
 			    $uData['id'] = ++$key;
 				$uData['btitle']=$r->ebook_title;
 				$uData['eimg']="<img src='".config('constants.image_path').$r->ebook_icon."' style='width:60px;'>";
-				$btn='<a href="#" id="'.$r->id.'" class="edit btn btn-brand btn-elevate btn-circle btn-icon"  data-toggle="modal" data-target="#kt_modal_1"  title="Edit"><i class="fa fa-edit"></i></a> 
-					 <a href="#" id="'.$r->id.'"  class="btndel btn btn-danger btn-elevate btn-circle btn-icon"  title="Delete"><i class="fa fa-trash"></i></a>'; 
+				$btn='<a href="#" id="'.$r->id.'" class="edit btn bt-brand btn-secondary btn-elevate btn-circle btn-icon"  data-toggle="modal" data-target="#kt_modal_1"  title="Edit"><i class="fa fa-edit"></i></a> 
+					 <a href="#" id="'.$r->id.'"  class="btndel btn bt-danger btn-secondary btn-elevate btn-circle btn-icon"  title="Delete"><i class="fa fa-trash"></i></a>'; 
 			
 				$uData['action'] = $btn;
 						

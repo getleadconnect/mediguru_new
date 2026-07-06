@@ -107,7 +107,7 @@
 								<tr>
 									<th>Id</th>
 									<th >Name</th>
-									<th width="80px">Action</th>
+									<th width="90px">Action</th>
 								</tr>
 							</thead>
 							<tbody>
@@ -116,9 +116,9 @@
 							<tr>
 								<td>{{$r->id}}</td>
 								<td>{{$r->subject_name}}</td>
-								<td width="80px">
-								<a href="" id="{{$r->id}}" class="edit btn btn-brand btn-elevate btn-circle btn-icon" data-toggle="modal" title="Edit"><i class="fa fa-edit"></i></a> 
-								<a href="{{url('delete_qb_subject').'/'.$r->id}}" id="conf" class="btn btn-danger btn-elevate btn-circle btn-icon" title="Delete"><i class="fa fa-trash"></i></a> 
+								<td width="90px">
+								<a href="" id="{{$r->id}}" class="edit btn bt-brand btn-secondary btn-elevate btn-circle btn-icon" data-toggle="modal" title="Edit"><i class="fa fa-edit"></i></a> 
+								<a href="{{url('delete_qb_subject').'/'.$r->id}}" id="conf" class="btn bt-danger btn-secondary btn-elevate btn-circle btn-icon" title="Delete"><i class="fa fa-trash"></i></a> 
 							</td>
 							</tr>
 							@endforeach
@@ -200,7 +200,9 @@ $("#btnSet").click(function()
 	  "bDestroy":true,
 	  "stateSave": true,
 	  
-	  
+	  columnDefs:[
+				  {"width":"80px","targets":2},
+				],
    });
 
 

@@ -113,7 +113,7 @@ class McqQuestion extends Model
 				$uData['cans']=$r->correct_answer;
 				$uData['expl']=$r->explanation;
 
-				$btn='<a href="'.url('delete_mcqquestion').'/'.$r->id.'" id="conf" class=" btn btn-danger btn-xs" style="padding:2px 2px 2px 7px;" title="Delete"><i class="fa fa-trash"></i></a>'; 
+				$btn='<a href="'.url('delete_mcqquestion').'/'.$r->id.'" id="conf" class=" btn bt-danger btn-secondary btn-circle btn-icon"  title="Delete"><i class="fa fa-trash"></i></a>'; 
 				$uData['action'] = $btn;
 						
 			    $data[] = $uData;
@@ -148,8 +148,8 @@ class McqQuestion extends Model
 		
 		if($dat->question_type==2)
 		{
-		$fna=$dat->question_image;
-		Storage::disk('spaces')->delete($fna); 
+			$fna=$dat->question_image;
+			Storage::disk('spaces')->delete($fna); 
 		}
 		
 		$result=$dat->delete();
@@ -159,17 +159,17 @@ class McqQuestion extends Model
 	public function deleteQuestionByQpaperId($qpid)
 	{
 		$dat=self::where('mcq_question_paper_id',$qpid)->get();
-		foreach($dat as $r)
-		{
-			if($dat->question_type==2)
-			 {
-				$fna=$dat->question_image;
-				Storage::disk('spaces')->delete($fna); 
-			 }					
-		}			
+			foreach($dat as $r)
+			{
+				if($r->question_type==2 && !empty($r->question_image))
+				{
+					$fna=$r->question_image;
+					Storage::disk('spaces')->delete($fna); 
+				}
+			  $result=$r->delete();
+			}			
 		
-		$result=$dat->delete();
-		return $result;
+		return $result??1;
 	}
 	
 	
@@ -224,7 +224,7 @@ class McqQuestion extends Model
 			    $uData['id'] = $r->id;
 				$uData['quest']=$qst;
 				$uData['qmode']=$qmode;
-				$btn='<a href="#" id="'.$r->id.'" class="attendies btn btn-info btn-xs sharp mr-1" style="padding:5px 7px 5px 7px;" title="get attended students">Get</a>'; 
+				$btn='<a href="#" id="'.$r->id.'" class="attendies btn bt-brand btn-secondary btn-xs sharp mr-1" style="padding:5px 7px 5px 7px;" title="get attended students">Get</a>'; 
 				$uData['action'] = $btn;
 						
 			    $data[] = $uData;

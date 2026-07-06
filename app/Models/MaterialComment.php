@@ -85,7 +85,7 @@ class MaterialComment extends Model
 					$mt='<span class="kt-badge kt-badge--warning kt-badge--inline kt-badge--pill">L-Test</span>';
 				}
 
-				$action='<a href="'.url('delete_comment').'/'.$r->id.'" id="conf" class="btn btn-danger btn-elevate btn-circle btn-icon" title="Delete"><i class="fa fa-trash"></i></a>&nbsp;';
+				$action='<a href="'.url('delete_comment').'/'.$r->id.'" id="conf" class="btn bt-danger btn-secondary btn-elevate btn-circle btn-icon" title="Delete"><i class="fa fa-trash"></i></a>&nbsp;';
 				
 			    $uData['id'] = ++$key;
 				$uData['sname'] = $r->name;

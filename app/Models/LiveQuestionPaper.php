@@ -35,6 +35,8 @@ class LiveQuestionPaper extends Model
 	'question_paper_name'=>'required',
 	'question_paper_icon'=>'required',
 	'test_time'=>'required',
+	'question_mark'=>'required',
+	'negative_mark'=>'required',
 	];
 	
 	public const EDIT_RULES=[
@@ -43,7 +45,9 @@ class LiveQuestionPaper extends Model
 	'premium'=>'required',
 	'question_paper_name'=>'required',
 	'test_time'=>'required',
-	'instruction'=>'required'
+	'instruction'=>'required',
+	'question_mark'=>'required',
+	'negative_mark'=>'required',
 	];
 			
 	public function addQuestionPaper($request)
@@ -81,6 +85,8 @@ class LiveQuestionPaper extends Model
 			'test_date'=>$tdate,
 			'start_time'=>$stime,
 			'start_time_text'=>$sttime,
+			'question_mark'=>$request->question_mark,
+			'negative_mark'=>$request->negative_mark,
 			'status'=>1
 			
 		]);
@@ -132,6 +138,8 @@ class LiveQuestionPaper extends Model
 			'test_date'=>$tdate,
 			'start_time'=>$stime,
 			'start_time_text'=>$sttime,
+			'question_mark'=>$request->question_mark,
+			'negative_mark'=>$request->negative_mark,
 			'status'=>1
 		];
 		
@@ -188,17 +196,18 @@ class LiveQuestionPaper extends Model
 					$uData['cname'] = $r->course_name;
 					$uData['ttime']="● ".$r->test_time." minutes<br>● Time: ".$r->start_time_text;
 					$uData['tdate']=date_create($r->test_date)->format('d-m-Y');
+					$uData['marks']="● Mark:&nbsp;".$r->question_mark."<br>● Neg:&nbsp;".$r->negative_mark;
 
 					//$uData['desc'] =substr($r->description,0,80)."..more";*/
 					//$uData['instruct'] =substr($r->instruction,0,80)."..more";*/
 					$uData['status'] =$st;
 
-					$btn='<a href="#" id="'.$r->id.'" class="edit btn btn-brand btn-elevate btn-circle btn-icon" data-toggle="modal"  title="Edit"><i class="fa fa-edit"></i></a> 
-						 <a href="'.url('delete_mcq_qpaper').'/'.$r->id .'" class=" btn btn-danger btn-elevate btn-circle btn-icon" title="Delete"><i class="fa fa-trash"></i></a>'; 
+					$btn='<a href="#" id="'.$r->id.'" class="edit btn bt-primary btn-secondary btn-elevate btn-circle btn-icon" data-toggle="modal"  title="Edit"><i class="fa fa-edit"></i></a> 
+						 <a href="'.url('delete_live_qpaper').'/'.$r->id .'" class=" btn bt-danger btn-secondary btn-elevate btn-circle btn-icon" title="Delete"><i class="fa fa-trash"></i></a>'; 
 					if($r->status==1)
-						  $btn.='<a href="'.url('deactivate_mcq_qpaper').'/'.$r->id.'" class="btn btn-warning btn-elevate btn-circle btn-icon" title="Deactivate"><i class="fa fa-times"></i></a>'; 	
+						  $btn.='&nbsp;<a href="'.url('deactivate_live_qpaper').'/'.$r->id.'" class="btn bt-warning btn-secondary btn-elevate btn-circle btn-icon" title="Deactivate"><i class="fa fa-times"></i></a>'; 	
 					else
-						 $btn.='<a href="'.url('activate_mcq_qpaper').'/'.$r->id.'" class="edit btn btn-success btn-elevate btn-circle btn-icon" title="Activate"><i class="fa fa-check"></i></a>'; 	
+						 $btn.='&nbsp;<a href="'.url('activate_live_qpaper').'/'.$r->id.'" class="edit btn bt-success btn-secondary btn-elevate btn-circle btn-icon" title="Activate"><i class="fa fa-check"></i></a>'; 	
 					
 					$uData['action'] = $btn;
 

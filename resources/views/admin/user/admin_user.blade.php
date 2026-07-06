@@ -128,7 +128,7 @@
 									<th >Role</th>
 									<th >Menu</th>
 									<th >Status</th>
-									<th width="80px">Action</th>
+									<th width="100px">Action</th>
 								</tr>
 							</thead>
 							<tbody>
@@ -220,7 +220,7 @@ var table = $('#datatable').DataTable({
 		columnDefs:[
 				      {"width":"250px","targets":3},
 					  {"width":"150px","targets":5},
-					  {"width":"90px","targets":7},
+					  {"width":"100px","targets":7},
 				   ],
 	
         columns: [

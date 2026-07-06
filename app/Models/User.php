@@ -139,12 +139,12 @@ class User extends Authenticatable
 				$uData['email']=$r->email;
 				$uData['status']=$st;
 				
-				$btn='<a href="javascript:void();" id="'.$r->id.'" class="edit btn btn-brand btn-elevate btn-circle btn-icon" data-toggle="modal"  title="Edit"><i class="fa fa-edit"></i></a>
-					  <a href="'.url('delete_user').'/'.$r->id.'" id="conf" class=" btn btn-danger btn-elevate btn-circle btn-icon" title="Delete"><i class="fa fa-trash"></i></a>&nbsp;'; 
+				$btn='<a href="javascript:void();" id="'.$r->id.'" class="edit btn bt-brand btn-secondary btn-elevate btn-circle btn-icon" data-toggle="modal"  title="Edit"><i class="fa fa-edit"></i></a>
+					  <a href="'.url('delete_user').'/'.$r->id.'" id="conf" class=" btn bt-danger btn-secondary btn-elevate btn-circle btn-icon" title="Delete"><i class="fa fa-trash"></i></a>&nbsp;'; 
 				if($r->status==1)
-					  $btn.='<a href="'.url('deactivate_user').'/'.$r->id.'" class="edit btn btn-warning btn-elevate btn-circle btn-icon" title="Deactivate"><i class="fa fa-times"></i></a>'; 	
+					  $btn.='<a href="'.url('deactivate_user').'/'.$r->id.'" class="edit btn bt-warning btn-secondary btn-elevate btn-circle btn-icon" title="Deactivate"><i class="fa fa-times"></i></a>'; 	
 				else
-					 $btn.='<a href="'.url('activate_user').'/'.$r->id.'" class="edit btn btn-success btn-elevate btn-circle btn-icon" title="Activate"><i class="fa fa-check"></i></a>'; 	
+					 $btn.='<a href="'.url('activate_user').'/'.$r->id.'" class="edit btn bt-success btn-secondary btn-elevate btn-circle btn-icon" title="Activate"><i class="fa fa-check"></i></a>'; 	
 				
 				$uData['action']=$btn;
 						

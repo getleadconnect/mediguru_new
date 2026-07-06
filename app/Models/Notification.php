@@ -80,13 +80,13 @@ class Notification extends Model
 				else
 					$st='<span class="kt-badge kt-badge--danger  kt-badge--inline kt-badge--pill">Inactive</span>';
 
-				$action='<a href="#" id="'.$r->id.'"  class="btnDel btn btn-danger btn-elevate btn-circle btn-icon" title="Delete"><i class="fa fa-trash"></i></a>&nbsp;';
+				$action='<a href="#" id="'.$r->id.'"  class="btnDel btn bt-danger btn-secondary btn-elevate btn-circle btn-icon" title="Delete"><i class="fa fa-trash"></i></a>&nbsp;';
 
 				$btn='';
 				if($r->status==1)
-					  $btn.='<a href="#" id="'.$r->id.'" rel="2" class="btnActDeact btn  btn-warning btn-circle btn-icon" title="Deactivate" ><i class="fa fa-times"></i></a>'; 	
+					  $btn.='<a href="#" id="'.$r->id.'" rel="2" class="btnActDeact btn  bt-warning btn-secondary btn-circle btn-icon" title="Deactivate" ><i class="fa fa-times"></i></a>'; 	
 				else
-					 $btn.='<a href="#" id="'.$r->id.'" rel="1" class="btnActDeact btn btn-success btn-circle btn-icon" title="Activate"><i class="fa fa-check"></i></a>'; 	
+					 $btn.='<a href="#" id="'.$r->id.'" rel="1" class="btnActDeact btn bt-success btn-secondary btn-circle btn-icon" title="Activate"><i class="fa fa-check"></i></a>'; 	
 				
 				
 			    $uData['id'] = ++$key;

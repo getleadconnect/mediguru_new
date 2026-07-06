@@ -70,7 +70,7 @@ class StudentDevice extends Model
 				$uData['device']=$r->device;
 				$uData['model']=$r->model;
 				
-				$btn='<a href="'.url('delete_student_device').'/'.$r->id.'" id="conf" class=" btn btn-danger btn-elevate btn-circle btn-icon" title="Delete"><i class="fa fa-trash"></i></a>'; 
+				$btn='<a href="'.url('delete_student_device').'/'.$r->id.'" id="conf" class=" btn bt-danger btn-secondary btn-elevate btn-circle btn-icon" title="Delete"><i class="fa fa-trash"></i></a>'; 
 				
 				$uData['action'] = $btn;
 						

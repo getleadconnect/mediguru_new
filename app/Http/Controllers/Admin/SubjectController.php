@@ -152,7 +152,7 @@ class SubjectController extends Controller
 
 				$udata['stype']=$r->subject_type;
 				$udata['desc']=$r->description;
-				$udata['mark']='Mark:'.$r->question_mark.'<br> Neg:'.$r->negative_mark;
+				$udata['mark']='● Mark:'.$r->question_mark.'<br>● Neg:'.$r->negative_mark;
 								
 				if($r->status==1){
 					$st='<span class="badge badge-success">Active</span>';
@@ -163,18 +163,18 @@ class SubjectController extends Controller
 				
 				$udata['status']=$st;
 								
-				$btn='<a href="" id="'.$r->id.'" class="edit btn btn-brand btn-elevate btn-circle btn-icon" data-toggle="modal" title="Edit"><i class="fa fa-edit"></i></a> 
-					 <a href="'.url('delete_subject').'/'.$r->id.'" id="conf" class="btn btn-danger btn-elevate btn-circle btn-icon" title="Delete"><i class="fa fa-trash"></i></a>';
+				$btn='<a href="" id="'.$r->id.'" class="edit btn bt-brand btn-secondary btn-elevate btn-circle btn-icon" data-toggle="modal" title="Edit"><i class="fa fa-edit"></i></a> 
+					 <a href="'.url('delete_subject').'/'.$r->id.'" id="conf" class="btn bt-danger btn-secondary btn-elevate btn-circle btn-icon" title="Delete"><i class="fa fa-trash"></i></a>';
 									
 				if($r->status==1){
-					$btn.='&nbsp;<a href="'.url('deactivate_subject').'/'.$r->id.'" class="btn btn-warning btn-elevate btn-circle btn-icon" title="Deactivate"><i class="fa fa-times"></i></a>'; 	
+					$btn.='&nbsp;<a href="'.url('deactivate_subject').'/'.$r->id.'" class="btn bt-warning btn-secondary btn-elevate btn-circle btn-icon" title="Deactivate"><i class="fa fa-times"></i></a>'; 	
 				}
 				else{
-					$btn.='&nbsp;<a href="'.url('activate_subject').'/'.$r->id.'" class="btn btn-success btn-elevate btn-circle btn-icon" title="Activate"><i class="fa fa-check"></i></a>'; 	
+					$btn.='&nbsp;<a href="'.url('activate_subject').'/'.$r->id.'" class="btn bt-success btn-secondary btn-elevate btn-circle btn-icon" title="Activate"><i class="fa fa-check"></i></a>'; 	
 				}
 				
-				$btn.='&nbsp;<a href="" id="'.$r->id.'" class="btnCopySubject btn btn-info btn-elevate btn-circle btn-icon" data-toggle="modal" title="Copy Subject"><i class="fa fa-clone"></i></a>';
-				
+				$udata['scopy']='<button type="button" id="'.$r->id.'" class="btnCopySubject btn btn-secondary btn-elevate btn-pill" style="width: 90px;padding: 5px;"><i class="fa fa-clone bt-primary"></i>Copy</button>';
+
 				$udata['action']=$btn;
 				
 				$data[] = $udata;
@@ -190,7 +190,7 @@ class SubjectController extends Controller
             $data = $this->viewSubjects($request);
             return DataTables::of($data)
                     ->addIndexColumn()
-                    ->rawColumns(['cimg','action','desc','mark','status','sname'])
+                    ->rawColumns(['cimg','action','desc','mark','status','sname','scopy'])
                     ->make(true);
         }
 	}

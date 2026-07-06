@@ -86,7 +86,8 @@
 									<th>Description</th>
 									<th>Marks</th>
 									<th>Status</th>
-									<th width="90px">Action&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+									<th style="padding-left:20px;">Copy</th>
+									<th width="110px">Action&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
 								</tr>
 							</thead>
 							<tbody>
@@ -103,11 +104,11 @@
 		<!--end:: Widgets/Sale Reports-->
 	  </div>
      </div>
-   </div>
-</div>
+    </div>
+  </div>
 
 
-    <div id="kt_quick_panel" class="kt-quick-panel">
+  <div id="kt_quick_panel" class="kt-quick-panel">
 			<a href="#" class="kt-quick-panel__close" style="border:1px solid #22b9ff;" id="kt_quick_panel_close_btn"><i class="flaticon2-delete" style="color:red;"></i></a>
 			<div class="kt-quick-panel__nav">
 				<ul class="nav nav-tabs nav-tabs-line nav-tabs-bold nav-tabs-line-3x nav-tabs-line-brand  kt-notification-item-padding-x" role="tablist">
@@ -313,7 +314,7 @@
 							 
 								<div class="col-lg-4 col-xl-4 col-xxl-4">
 								<label>Negative Mark </label>
-									<input type="text" class=" textarea form-control" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"  name="negative_mark" required>
+									<input type="text" class=" form-control" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"  name="negative_mark" required>
 								</div>
 							</div>
 							</div>
@@ -500,7 +501,9 @@ $(document).ready(function()
 		},
 		
 		columnDefs:[
-				  {"width":"50px","targets":[1,2]},
+				  {"width":"50px","targets":1},
+				  {"width":"80px","targets":6},
+				  {"width":"100px","targets":9},
 				],
 
         columns: [
@@ -512,6 +515,7 @@ $(document).ready(function()
 			{"data": "desc" },
 			{"data": "mark" },
 			{"data": "status" },
+			{"data": "scopy" },
 			{"data": "action" ,name: 'Action',orderable: false, searchable: false },
         ],
 		initComplete: function(settings, json) {

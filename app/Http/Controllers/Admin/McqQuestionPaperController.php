@@ -145,7 +145,7 @@ class McqQuestionPaperController extends Controller
 								//$btn = '<a href="javascript:void(0)" class="edit btn btn-primary btn-sm"> View</a>';
 							})*/
 					
-                    ->rawColumns(['action','qpname','ttime','status','qpicon','course'])
+                    ->rawColumns(['action','qpname','ttime','status','qpicon','course','marks'])
                     ->make(true);
         }
 	}

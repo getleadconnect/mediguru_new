@@ -245,8 +245,8 @@ class Student extends Model
 				$uData['cdate']=date_create($r->created_at)->format('d-m-Y h:i:s A');
 				$uData['status'] =$st;
 				
-				$btn='<a href="#" id="'.$r->id.'" class="edit btn btn-brand btn-elevate btn-circle btn-icon" data-toggle="modal"  title="Edit"><i class="fa fa-edit"></i></a> 
-					 <a href="'.url('delete_student').'/'.$r->id.'" id="conf" class="btn btn-danger btn-elevate btn-circle btn-icon" title="Delete"><i class="fa fa-trash"></i></a>'; 
+				$btn='<a href="#" id="'.$r->id.'" class="edit btn bt-brand btn-secondary btn-elevate btn-circle btn-icon" data-toggle="modal"  title="Edit"><i class="fa fa-edit"></i></a> 
+					 <a href="'.url('delete_student').'/'.$r->id.'" id="conf" class="btn bt-danger btn-secondary btn-elevate btn-circle btn-icon" title="Delete"><i class="fa fa-trash"></i></a>'; 
 				
 				/*if($r->status==1)
 					  $btn.='<a href="'.url('deactivate_student').'/'.$r->id.'" class="btn btn-warning shadow btn-xs sharp mr-1" title="Deactivate"><i class="fa fa-times"></i></a>'; 	

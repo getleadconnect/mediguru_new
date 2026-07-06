@@ -133,14 +133,14 @@ class Promocode extends Model
 				$uData['desc']=$r->description;
 				$uData['status']=$st;
 
-				$btn='<a href="#" id="'.$r->id.'" class="edit btn btn-brand btn-elevate btn-circle btn-icon"  data-toggle="modal"  title="Edit"><i class="fa fa-edit"></i></a> 
-					 <a href="#" id="'.$r->id.'" class="btndel btn btn-danger btn-elevate btn-circle btn-icon"  title="Delete"><i class="fa fa-trash"></i></a>'; 
+				$btn='<a href="#" id="'.$r->id.'" class="edit btn bt-brand btn-secondary btn-elevate btn-circle btn-icon"  data-toggle="modal"  title="Edit"><i class="fa fa-edit"></i></a> 
+					 <a href="#" id="'.$r->id.'" class="btndel btn bt-danger btn-secondary btn-elevate btn-circle btn-icon"  title="Delete"><i class="fa fa-trash"></i></a>'; 
 					 //<a href="'.url('delete_promocode').'/'.$r->id.'" id="conf" class="edit btn btn-danger btn-elevate btn-circle btn-icon"  title="Delete"><i class="fa fa-trash"></i></a>'; 
 					 
 				if($r->status==1)
-					  $btn.='<a href="#" id="'.$r->id.'/1" class="btnActDeact btn btn-warning btn-elevate btn-circle btn-icon"  title="Deactivate" style="margin-left:3px;"><i class="fa fa-times"></i></a>'; 	
+					  $btn.='<a href="#" id="'.$r->id.'/1" class="btnActDeact btn bt-warning btn-secondary btn-elevate btn-circle btn-icon"  title="Deactivate" style="margin-left:3px;"><i class="fa fa-times"></i></a>'; 	
 				else
-					 $btn.='<a href="#" id="'.$r->id.'/2" class="btnActDeact btn btn-success btn-elevate btn-circle btn-icon"  title="Activate" style="margin-left:3px;"><i class="fa fa-check"></i></a>'; 	
+					 $btn.='<a href="#" id="'.$r->id.'/2" class="btnActDeact btn bt-success btn-secondary btn-elevate btn-circle btn-icon"  title="Activate" style="margin-left:3px;"><i class="fa fa-check"></i></a>'; 	
 				
 				$uData['action'] = $btn;
 						

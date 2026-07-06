@@ -113,7 +113,7 @@ class LessonVideoQuestion extends Model
 				$uData['cans']=$r->correct_answer;
 				$uData['expl']=$r->explanation;
 
-				$btn='<a href="'.url('delete_video_question').'/'.$r->id.'" id="conf" class=" btn btn-danger btn-xs" style="padding:2px 2px 2px 7px;" title="Delete"><i class="fa fa-trash"></i></a>'; 
+				$btn='<a href="'.url('delete_video_question').'/'.$r->id.'" id="conf" class=" btn bt-danger btn-secondary btn-xs" style="padding:2px 2px 2px 7px;" title="Delete"><i class="fa fa-trash"></i></a>'; 
 				$uData['action'] = $btn;
 						
 			    $data[] = $uData;

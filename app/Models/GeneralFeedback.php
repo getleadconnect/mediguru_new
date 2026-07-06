@@ -62,7 +62,7 @@ class GeneralFeedback extends Model
             {
 				$mt='';
 
-				$action='<a href="'.url('delete_general_feedback').'/'.$r->id.'" id="conf" class="btn btn-danger btn-elevate btn-circle btn-icon" title="Delete"><i class="fa fa-trash"></i></a>&nbsp;';
+				$action='<a href="'.url('delete_general_feedback').'/'.$r->id.'" id="conf" class="btn bt-danger btn-secondary btn-elevate btn-circle btn-icon" title="Delete"><i class="fa fa-trash"></i></a>&nbsp;';
 				
 			    $uData['id'] = ++$key;
 				$uData['name'] = $r->name;

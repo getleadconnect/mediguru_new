@@ -78,7 +78,7 @@ class DashLiveMockTest extends Model
 				$uData['cname'] =$r->course_name;
 				$uData['qpaper'] =$r->question_paper_name;
 				
-				$btn='<a href="#" id="'.$r->id.'" class=" btnDel btn btn-danger btn-elevate btn-circle btn-icon" title="Delete"><i class="fa fa-trash"></i></a>&nbsp;'; 
+				$btn='<a href="#" id="'.$r->id.'" class=" btnDel btn bt-danger btn-secondary btn-elevate btn-circle btn-icon" title="Delete"><i class="fa fa-trash"></i></a>&nbsp;'; 
 				
 				$uData['action'] = $btn;
 						

@@ -97,7 +97,7 @@
 					<table id="datatable" class="table table-bordered dt-responsive" style="border-collapse:collapse; border-spacing:0; width:90%;">
 						<thead>
 							<tr>
-								<th width="50px"></th>
+								<th width="40px"></th>
 								<th>Id</th>
 								<th>Subject</th>
 								<th width="450px">Image/Question</th>
@@ -152,13 +152,13 @@
 							
 							<label style="float:right"><span>Total Questions:&nbsp;</span><span id="totquestion1" style="font-weight:600;font-size:16px;"> </span></label>
 
-							<div style="overflow-x:scroll;width:330px;max-height:400px;">
+							<div style="overflow-x:scroll;width:100%;max-height:400px;">
 
 								<table style="width:150%" id="tb_questions" border=1>
 								<tr><th>&nbsp;</th><th width="60px">id</th><th>Question</th></tr>
 								<tbody id="tquestion">
 									
-									<!-- uestiions here --->
+									<!-- questions here --->
 									
 								</tbody>
 							</table>
@@ -321,6 +321,8 @@ $("#video_id").change(function()
           },
 
 		columnDefs:[
+				  {"width":"40px","targets":0},
+				  {"width":"70px","targets":1},
 				  {"width":"150px","targets":2},
 				],
 	

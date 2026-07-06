@@ -151,12 +151,12 @@ class Lesson extends Model   //chapters
 				$uData['ordno'] =$r->order_no;
 				$uData['status'] =$st;
 				
-				$btn='<a href="#" id="'.$r->id.'" class="edit btn btn-brand btn-elevate btn-circle btn-icon" data-toggle="modal"  title="Edit"><i class="fa fa-edit"></i></a> 
-					 <a href="#" id="'.$r->id.'" class=" btndel btn btn-danger btn-elevate btn-circle btn-icon" title="Delete"><i class="fa fa-trash"></i></a>&nbsp;'; 
+				$btn='<a href="#" id="'.$r->id.'" class="edit btn bt-brand btn-secondary btn-elevate btn-circle btn-icon" data-toggle="modal"  title="Edit"><i class="fa fa-edit"></i></a> 
+					 <a href="#" id="'.$r->id.'" class=" btndel btn bt-danger btn-secondary btn-elevate btn-circle btn-icon" title="Delete"><i class="fa fa-trash"></i></a>&nbsp;'; 
 				if($r->status==1)
-					  $btn.='<a href="#" id="'.$r->id.'/2" class="btnActDeact btn btn-warning btn-elevate btn-circle btn-icon" title="Deactivate"><i class="fa fa-times"></i></a>'; 	
+					  $btn.='<a href="#" id="'.$r->id.'/2" class="btnActDeact btn bt-warning btn-secondary btn-elevate btn-circle btn-icon" title="Deactivate"><i class="fa fa-times"></i></a>'; 	
 				else
-					 $btn.='<a href="#" id="'.$r->id.'/1" class="btnActDeact btn btn-success btn-elevate btn-circle btn-icon" title="Activate"><i class="fa fa-check"></i></a>'; 	
+					 $btn.='<a href="#" id="'.$r->id.'/1" class="btnActDeact btn bt-success btn-secondary btn-elevate btn-circle btn-icon" title="Activate"><i class="fa fa-check"></i></a>'; 	
 				
 				$uData['action'] = $btn;
 						

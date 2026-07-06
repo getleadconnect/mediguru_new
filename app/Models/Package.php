@@ -219,13 +219,13 @@ public function updateCoursePackage($request)
 
 				$uData['status']=$st;
 				
-				$btn.='<a href="#" id="'.$r->id.'" class="edit btn btn-primary btn-elevate btn-circle btn-icon" data-toggle="modal" title="Delete"><i class="fa fa-edit"></i></a>&nbsp;
-				<a href="'.url('delete_subject_package').'/'.$r->id.'/1" id="conf" class="btn btn-danger btn-elevate btn-circle btn-icon" title="Delete"><i class="fa fa-trash"></i></a>&nbsp;'; 
+				$btn.='<a href="#" id="'.$r->id.'" class="edit btn bt-brand btn-secondary btn-elevate btn-circle btn-icon" data-toggle="modal" title="Delete"><i class="fa fa-edit"></i></a>&nbsp;
+				<a href="'.url('delete_subject_package').'/'.$r->id.'/1" id="conf" class="btn bt-danger btn-secondary btn-elevate btn-circle btn-icon" title="Delete"><i class="fa fa-trash"></i></a>&nbsp;'; 
 				
 				if($r->status==1)
-					  $btn.='<a href="'.url('deactivate_package').'/'.$r->id.'" class="btn btn-warning btn-elevate btn-circle btn-icon" title="Deactivate"><i class="fa fa-times"></i></a>'; 	
+					  $btn.='<a href="'.url('deactivate_package').'/'.$r->id.'" class="btn bt-warning btn-secondary btn-elevate btn-circle btn-icon" title="Deactivate"><i class="fa fa-times"></i></a>'; 	
 				else
-					 $btn.='<a href="'.url('activate_package').'/'.$r->id.'" class=" btn btn-success btn-elevate btn-circle btn-icon" title="Activate"><i class="fa fa-check"></i></a>'; 	
+					 $btn.='<a href="'.url('activate_package').'/'.$r->id.'" class=" btn bt-success btn-secondary btn-elevate btn-circle btn-icon" title="Activate"><i class="fa fa-check"></i></a>'; 	
 				
 				$uData['action']=$btn;
 						
@@ -298,19 +298,19 @@ public function updateCoursePackage($request)
 				$uData['ios_rate']="1 year: ₹ ".$r->ios_rate."<br>6-Months: ₹ ".$r->ios_6_months."<br>3-Months: ₹ ".$r->ios_3_months;
 				$uData['status']=$st;
 				
-				$btn.='<a href="#" id="'.$r->id.'" class="edit btn btn-primary btn-elevate btn-circle btn-icon" data-toggle="modal" title="Delete"><i class="fa fa-edit"></i></a>&nbsp;
-				<a href="'.url('delete_package').'/'.$r->id.'/2" id="conf" class="btn btn-danger btn-elevate btn-circle btn-icon" title="Delete"><i class="fa fa-trash"></i></a>&nbsp;'; 
+				$btn.='<a href="#" id="'.$r->id.'" class="edit btn bt-brand btn-secondary btn-elevate btn-circle btn-icon" data-toggle="modal" title="Delete"><i class="fa fa-edit"></i></a>&nbsp;
+				<a href="'.url('delete_package').'/'.$r->id.'/2" id="conf" class="btn bt-danger btn-secondary btn-elevate btn-circle btn-icon" title="Delete"><i class="fa fa-trash"></i></a>&nbsp;'; 
 				
 				if($r->status==1)
 				{
-					  $btn.='<a href="'.url('deactivate_package').'/'.$r->id.'" class="btn btn-warning btn-elevate btn-circle btn-icon" title="Deactivate"><i class="fa fa-times"></i></a>'; 	
+					  $btn.='<a href="'.url('deactivate_package').'/'.$r->id.'" class="btn bt-warning btn-secondary btn-elevate btn-circle btn-icon" title="Deactivate"><i class="fa fa-times"></i></a>'; 	
 				}
 				else
 				{
-					 $btn.='<a href="'.url('activate_package').'/'.$r->id.'" class=" btn btn-success btn-elevate btn-circle btn-icon" title="Activate"><i class="fa fa-check"></i></a>'; 	
+					 $btn.='<a href="'.url('activate_package').'/'.$r->id.'" class=" btn bt-success btn-secondary btn-elevate btn-circle btn-icon" title="Activate"><i class="fa fa-check"></i></a>'; 	
 				}
 				
-				$btn1='&nbsp;&nbsp;<a href="#" id="'.$r->id.'" res="'.$r->course_unique_id.'" class="btnADsub btn btn-brand btn-elevate btn-circle btn-icon" data-toggle="modal" data-target="#kt_modal_2" title="add/Delete subjects"><span style="font-size:23px;">±</span></a>&nbsp;';
+				$btn1='&nbsp;&nbsp;<a href="#" id="'.$r->id.'" res="'.$r->course_unique_id.'" class="btnADsub btn bt-brand btn-secondary btn-elevate btn-circle btn-icon" data-toggle="modal" data-target="#kt_modal_2" title="add/Delete subjects"><span style="font-size:23px;">±</span></a>&nbsp;';
 				
 				$uData['action']=$btn.$btn1;
 						

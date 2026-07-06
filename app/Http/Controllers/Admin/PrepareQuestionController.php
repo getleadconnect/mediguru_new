@@ -51,7 +51,7 @@ class PrepareQuestionController extends Controller
 			}				
 			
 			return redirect('prepare_questions');
-	}		
+	}
 	
 	public function view_data(Request $request)
 	{
@@ -122,7 +122,7 @@ class PrepareQuestionController extends Controller
 				
 				->addColumn('selbtn',function($data)
 				{
-					return  '<button type="button" class="qselect btn btn-primary btn-sm" title="Select Question" style="padding: 5px 5px 5px 10px;"><i class="fa fa-plus"></i></button>';
+					return  '<button type="button" class="qselect btn btn-primary btn-sm" title="Select Question" style="padding: 3px 3px 3px 8px;"><i class="fa fa-plus"></i></button>';
 				})
 				->addColumn('action', function($row)
 				{
