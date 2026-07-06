@@ -263,12 +263,13 @@ $(".qpaper_id").change(function()
 });
 
  var table = $('#datatable').DataTable({
-        processing: true,
-        serverSide: true,
+        	processing: true,
+	        serverSide: true,
 		stateSave:true,
 		paging     : true,
-        pageLength :10,
+	        pageLength :10,
 		scrollX: true,
+		ordering: false,
 		
 		language: {
                     searchPlaceholder: 'Search',
