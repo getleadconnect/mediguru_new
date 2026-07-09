@@ -84,7 +84,7 @@
 									<th width="170px">Subject Name</th>
 									<th>Type</th>
 									<th>Description</th>
-									<th>Marks</th>
+									<!--<th>Marks</th>-->
 									<th>Status</th>
 									<th style="padding-left:20px;">Copy</th>
 									<th width="110px">Action&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
@@ -298,8 +298,10 @@
 				
 							<div class="form-group">
 							  <div class="row">
-								<div class="col-lg-4 col-xl-4 col-xxl-4">
+								<div class="col-lg-3 col-xl-3 col-xxl-3 col-form-label">
 								<label>Subject Type </label>
+								</div>
+								<div class="col-lg-4 col-xl-4 col-xxl-4">
 								<select id="subject_type" class="form-control input-default " name="subject_type" required>
 								<option value="">--select--</option>
 								<option value="MCQ">MCQ</option>
@@ -307,7 +309,7 @@
 								</select>
 							   </div>
 							
-							  <div class="col-lg-4 col-xl-4 col-xxl-4">
+							 <!-- <div class="col-lg-4 col-xl-4 col-xxl-4">
 								<label>Question Mark </label>
 								<input type="text" class="form-control" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" name="question_mark" required>
 							  </div>
@@ -315,7 +317,8 @@
 								<div class="col-lg-4 col-xl-4 col-xxl-4">
 								<label>Negative Mark </label>
 									<input type="text" class=" form-control" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"  name="negative_mark" required>
-								</div>
+								</div>-->
+
 							</div>
 							</div>
 							
@@ -503,7 +506,7 @@ $(document).ready(function()
 		columnDefs:[
 				  {"width":"50px","targets":1},
 				  {"width":"80px","targets":6},
-				  {"width":"100px","targets":9},
+				  {"width":"100px","targets":8},
 				],
 
         columns: [
@@ -513,7 +516,7 @@ $(document).ready(function()
 			{"data": "sname" },
 			{"data": "stype" },
 			{"data": "desc" },
-			{"data": "mark" },
+			//{"data": "mark" },
 			{"data": "status" },
 			{"data": "scopy" },
 			{"data": "action" ,name: 'Action',orderable: false, searchable: false },

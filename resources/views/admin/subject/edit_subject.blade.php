@@ -45,7 +45,7 @@
 				<input type="text" id="ed_subject_name" class="form-control input-default " name="ed_subject_name"  value="{{$sub->subject_name}}" required>
 		</div>
 		
-		<div class="form-group row">
+		<!--<div class="form-group row">
 			<label class="col-lg-3 col-xl-3 col-xxl-3 col-form-label">Question Mark </label>
 			<div class="col-lg-3 col-xl-3 col-xxl-3">
 			<input type="text" class="form-control" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" name="ed_question_mark" value="{{ $sub->question_mark}}" required>
@@ -55,8 +55,7 @@
 			<div class="col-lg-3 col-xl-3 col-xxl-3">
 				<input type="text" class=" textarea form-control" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" name="ed_negative_mark"  value="{{ $sub->negative_mark}}" required>
 			</div>
-		</div>
-		
+		</div> -->
 
 	   
 	   <div class="form-group">
@@ -89,7 +88,7 @@
 
 		<div class="form-group mt-3">
 			<label>Description </label>
-				<textarea rows=3 class=" form-control input-default " name="ed_description" required>{{$sub->description}}"</textarea>
+				<textarea rows=3 class=" form-control input-default " name="ed_description" required>{{$sub->description}}</textarea>
 			</div>
 
 	<div class="modal-footer">
