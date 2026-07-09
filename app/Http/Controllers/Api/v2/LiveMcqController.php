@@ -246,7 +246,9 @@ class LiveMcqController extends Controller
 		
 		$m=1;$n=1;
 		
-		$mr=Subject::where('id',$subid)->first();
+		//$mr=Subject::where('id',$subid)->first();
+
+		$mr=McqQuestionPaper::where('id',$qpid)->first();
 		if(!empty($mr)){$m=$mr->question_mark; $n=$mr->negative_mark;}
 				
 			$mark=$answer*$m;
@@ -811,13 +813,18 @@ public function get_dash_live_mock_tests(Request $request)  //live class for das
 		
 		$m=1;$n=1;
 
-		$mc=McqQuestionPaper::select('unique_id')->where('id',$qpid)->first();
+		/*$mc=McqQuestionPaper::select('unique_id')->where('id',$qpid)->first();
 		if(!empty($mc))
 		{
 			$mr=Subject::whereIn('id',DashLiveMockTest::select(['subject_id'])->where('live_unique_id',$mc->unique_id))->first();
 			if(!empty($mr)){$m=$mr->question_mark; $n=$mr->negative_mark;}
-		}
-		
+		}*/
+
+
+		$mr=McqQuestionPaper::where('id',$qpid)->first();
+		if(!empty($mr)){$m=$mr->question_mark; $n=$mr->negative_mark;}
+
+
 			$mark=$answer*$m;
 			$neg=($wrong*$n);
 			$score=$mark-$neg;

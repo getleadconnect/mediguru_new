@@ -3,9 +3,12 @@
 namespace App\Http\Controllers\Admin;
 
 use Illuminate\Http\Request;
+use Maatwebsite\Excel\Facades\Excel;
+use Maatwebsite\Excel\Excel as ExcelType;
 
 use App\Models\PackagePayment;
 use App\Models\Course;
+use App\Exports\PaymentListExport;
 
 use Validator;
 use Session;
@@ -78,5 +81,15 @@ class PackagePaymentController extends Controller
 	}
 
    
+	public function export(Request $request)
+	{
+		$byCourse=$request->searchByCourse;
+		$byYear=$request->searchByYear;
+		$search=$request->search;
+		$dateRange=$request->searchByDate;   
+		
+		return Excel::download(new PaymentListExport($dateRange,$byCourse,$byYear,$search), 'payment_list.csv', ExcelType::CSV);
+	}
+
    
 }

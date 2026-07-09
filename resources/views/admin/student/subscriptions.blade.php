@@ -49,10 +49,8 @@
 							<i class="la la-filter"></i> Filter
 							</button>
 						</li>
-						
 					</ul>
-					
-					
+	
 				</div>
 				
 			</div>
@@ -63,8 +61,8 @@
 				<!--begin::Accordion-->
 				<div class="accordion  accordion-toggle-arrow" id="accordionExample4">
 					<div class="card">
-					<div id="collapseOne4" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample4">
-						<div class="card-body" style="background:#e2f0f7;">
+					<div id="collapseOne4" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample4">
+						<div class="card-body" style="background:#e2f0f7;padding: 2px 10px 10px;">
 							
 							<div class="row">
 								<div class="col-lg-4 col-xl-4 col-xxl-4">
@@ -80,25 +78,39 @@
 									</select>
 								</div>
 								</div>
+
 								<div class="col-lg-2 col-xl-2 col-xxl-2">
-								<label class="col-lg-12 col-xl-12 col-xxl-12" style="padding-top:9px;">Select Year</label>
-								<div class="col-lg-12 col-xl-12 col-xxl-12">
-								   <select id="flt_year" class="form-control " name="flt_year" required>
-									<option value="">--select--</option>
-									@php
-									  $x=2022;date('Y')-10;
-									@endphp
-									@for($x=2022;$x<=date('Y');$x++)
-										<option value="{{$x}}">{{$x}}</option>
-									@endfor
-									</select>
+									<label class="col-lg-12 col-xl-12 col-xxl-12" style="padding-top:9px;">Select Year</label>
+									<div class="col-lg-12 col-xl-12 col-xxl-12">
+									<select id="flt_year" class="form-control " name="flt_year" required>
+										<option value="">--select--</option>
+										@php
+										$x=2022;date('Y')-10;
+										@endphp
+										@for($x=2022;$x<=date('Y');$x++)
+											<option value="{{$x}}">{{$x}}</option>
+										@endfor
+										</select>
+									</div>
 								</div>
+
+								<div class="col-lg-2 col-xl-2 col-xxl-2">
+									<label class="col-lg-12 col-xl-12 col-xxl-12" style="padding-top:9px;">Select Plan</label>
+									<div class="col-lg-12 col-xl-12 col-xxl-12">
+									<select id="flt_plan" class="form-control " name="flt_plan" required>
+										<option value="">--select--</option>
+										<option value="3">3 Months</option>
+										<option value="6">6 Months</option>
+										<option value="12">1 Year</option>
+										</select>
+									</div>
 								</div>
 								
-								<div class="col-lg-2 col-xl-2 col-xxl-2">
+								<div class="col-lg-3 col-xl-3 col-xxl-3">
 								<label class="col-lg-12 col-xl-12 col-xxl-12" style="padding-top:9px;">&nbsp;</label>
 								<div class="col-lg-12 col-xl-12 col-xxl-12">
-								   <button type="button" id="btnGet" class="btn btn-primary">Get</button>
+								   <button type="button" id="btnGet" class="btn btn-primary mr-3">Get</button>  
+								   <button type="button" id="exportToCsv" class="btn btn-primary"><i class="fa fa-download"></i> Export To CSV</button>
 								</div>
 								</div>
 																						
@@ -122,6 +134,7 @@
 									<th>Name</th>
 									<th>Course</th>
 									<th>Package</th>
+									<th>Period</th>
 									<th>Status</th>
 									<th width="50px">Action</th>
 								</tr>
@@ -187,7 +200,6 @@ $("#submit").prop("disabled",true);
 
 
 
-
  var table = $('#datatable').DataTable({
         processing: true,
         serverSide: true,
@@ -215,12 +227,14 @@ $("#submit").prop("disabled",true);
 		    {
                 data.searchByCourse = $('#flt_course_id').val();
 				data.searchByYear = $('#flt_year').val();
+				data.searchPlan = $('#flt_plan').val();
 				data.search = $('input[type="search"]').val();
 		    },
           },
 		
 		columnDefs:[
 				  {"width":"150px","targets":2},
+				  {"width":"150px","targets":6},
 
 				],
 	
@@ -231,6 +245,7 @@ $("#submit").prop("disabled",true);
 			{"data": "name" },
 			{"data": "course" },
 			{"data": "package" },
+			{"data": "period" },
 			{"data": "status" },
 			{"data": "action" ,name: 'Action',orderable: false, searchable: false },
         ],
@@ -247,6 +262,18 @@ $("#btnGet").click(function()
 	 table.draw();
  });
 
+
+$("#exportToCsv").click(function()
+ {
+	var params = {
+		searchByCourse : $('#flt_course_id').val(),
+		searchByYear   : $('#flt_year').val(),
+		searchPlan     : $('#flt_plan').val(),
+		search         : $('input[type="search"]').val()
+	};
+	var lnk = "{{ url('export_subscriptions') }}" + "?" + $.param(params);
+	window.location.href = lnk;
+ });
 
 
 $(document).on('click','#conf', function()

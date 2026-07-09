@@ -119,9 +119,6 @@ class LiveQuestionPaperController extends Controller
 			return $result;
 	}
 	
-
-
-	
   
    public function delete_live_qpaper($id)
 	{
@@ -163,7 +160,6 @@ class LiveQuestionPaperController extends Controller
         }
 	}
 		
-	
 	public function activate($id)
 	{
 

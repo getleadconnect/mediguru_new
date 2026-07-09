@@ -59,9 +59,8 @@
 				<div class="accordion  accordion-toggle-arrow" id="accordionExample4">
 					<div class="card">
 					<div id="collapseOne4" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample4">
-						<div class="card-body" style="background:#e2f0f7;">
-						<label><b><u>Filter By:</u></b></label>
-						<div class="row">
+						<div class="card-body" style="background:#e2f0f7;padding:2px 10px 10px;">
+						 <div class="row">
 							<div class="col-lg-3 col-xl-3 col-xxl-3">
 							<label style="padding-top:9px;">Select Course</label>
 	
@@ -89,19 +88,23 @@
 
 							<div class="col-lg-3 col-xl-3 col-xxl-3">
 							<label style="padding-top:9px;">Select Date</label>
-
 								<div class="input-group pull-right" id="kt_daterangepicker_6">
-										<input type="text" id="date_range" class="form-control" readonly="" placeholder="Select date range">
-										<div class="input-group-append">
-											<span class="input-group-text"><i class="la la-calendar-check-o"></i></span>
-										</div>
+									<input type="text" id="date_range" class="form-control" readonly="" placeholder="Select date range">
+									<div class="input-group-append">
+									  <span class="input-group-text"><i class="la la-calendar-check-o"></i></span>
+									</div>
 								</div>
 							</div>
 							<div class="col-lg-2 col-xl-2 col-xxl-2">
-							<label class="col-lg-12 col-xl-12 col-xxl-12" style="padding-top:8px;">&nbsp;</label>
-							   <button type="button" id="btnGet" class="btn btn-primary">Get</button>&nbsp;&nbsp;
-							   <button type="button" id="btnAll" class="btn btn-primary" >All</button>
+								<label class="col-lg-12 col-xl-12 col-xxl-12" style="padding-top:8px;">&nbsp;</label>
+							   	<button type="button" id="btnGet" class="btn btn-primary">Get</button>&nbsp;&nbsp;
+							   	<button type="button" id="btnAll" class="btn btn-primary mr-3" >All</button>
 							</div>
+							<div class="col-lg-2 col-xl-2 col-xxl-2 text-right">
+								<label class="col-lg-12 col-xl-12 col-xxl-12" style="padding-top:8px;">&nbsp;</label>
+								<button type="button" id="exportToCsv" class="btn btn-primary" ><i class="fa fa-download"></i> Export to CSV</button>
+							</div>
+							
 	  
 							</div>
 							
@@ -270,6 +273,23 @@ $(document).on('click','#conf', function()
 {
 	return confirm("Are you sure, Delete in the details?");
 });
+
+$("#exportToCsv").click(function()
+ {
+
+	var dt=$("#date_range").val();
+	var drange = dt.replaceAll("/", "-");
+
+	var params = {
+		seaarchByDate :drange,
+		searchByCourse : $('#flt_course_id').val(),
+		searchByYear   : $('#flt_year').val(),
+		search         : $('input[type="search"]').val()
+	};
+	
+	var lnk = "{{ url('export_payments') }}" + "?" + $.param(params);
+	window.location.href = lnk;
+ });
 
 
 

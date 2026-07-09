@@ -8,10 +8,14 @@ use App\Models\Course;
 use App\Models\Student;
 use App\Models\Subscription;
 use App\Models\PurchasedPackage;
+use App\Exports\PackageSubscriptionListExport;
 
 use Validator;
 use Session;
 use DataTables;
+use Carbon\Carbon;
+use Maatwebsite\Excel\Facades\Excel;
+use Maatwebsite\Excel\Excel as ExcelType;
 
 class SubscriptionController extends Controller
 {
@@ -34,6 +38,7 @@ class SubscriptionController extends Controller
 		$crs=$request->searchByCourse;
 	    $year=$request->searchByYear;
 		$search=$request->search;
+		$plan=$request->searchPlan;  //3 , 6, 12 months
 		
 		$qry=PurchasedPackage::query();
 		
@@ -56,7 +61,12 @@ class SubscriptionController extends Controller
 			$qry->whereYear('purchased_packages.created_at',$year);
 		else if($crs!="" and $year!="")
 			$qry->where('packages.course_unique_id','=',$crs)->whereYear('purchased_packages.created_at',$year);
-		
+
+		//filter by plan (3, 6, 12 months) - based on month difference of subscription start & end date
+		if($plan!="")
+			$qry->whereRaw('TIMESTAMPDIFF(MONTH, purchased_packages.subscription_start_date, purchased_packages.subscription_end_date) = ?',[$plan]);
+
+
 		$data=$qry->orderBy('purchased_packages.id','DESC')->get();
 		
 		return DataTables::of($data)
@@ -82,6 +92,19 @@ class SubscriptionController extends Controller
 				{
 					return "&bull; ".$row->package_name."<br>&bull; Expiry:<span style='color:red;font-size:11px;'>".date_create($row->subscription_end_date)->format('d-m-Y')."</span>";;
 				})
+
+				->addColumn('period',function($row)
+				{
+					$difMonth='';
+					if($row->subscription_start_date!="" and $row->subscription_end_date!="")
+						$difMonth=Carbon::parse($row->subscription_start_date)->diffInMonths(Carbon::parse($row->subscription_end_date));
+					if($difMonth==3)       $color='#0a8f5b';   // 3 Months  - green
+					elseif($difMonth==6)   $color='#e08e0b';   // 6 Months  - amber
+					elseif($difMonth==12)  $color='#c0392b';   // 12 Months - red
+					else                   $color='#6c757d';   // unknown   - grey
+					return $row->subscription_start_date." => ".$row->subscription_end_date."<br>Plan:&nbsp;<span style='font-size:13px;font-weight:600;color:{$color};'>".$difMonth. " Months</span>";
+				})
+
 				->addColumn('status',function($row)
 				{
 				if($row->subscription_end_date>date('Y-m-d'))
@@ -96,12 +119,22 @@ class SubscriptionController extends Controller
 					return '<a href="'.url('delete_subscription').'/'.$row->id.'" id="conf" class=" btn bt-danger btn-secondary btn-elevate btn-circle btn-icon" title="Delete Package" ><i class="fa fa-trash"></i></a>'; ;
 				})
 				
-				->rawColumns(['action','name','simage','package','date','status'])
+				->rawColumns(['action','name','simage','package','date','status','period'])
 				->make(true);
 
   }
     
 	
+   public function export(Request $request)
+	{
+		$byCourse=$request->searchByCourse;
+		$byYear=$request->searchByYear;
+		$search=$request->search;
+		$plan=$request->searchPlan;   //3, 6, 12 months
+
+		return Excel::download(new PackageSubscriptionListExport($byCourse,$byYear,$search,$plan), 'subscription_list.csv', ExcelType::CSV);
+	}
+
    public function destroy($id)
 	{
 
@@ -118,5 +151,6 @@ class SubscriptionController extends Controller
 
 			return redirect('subscriptions');
 	}
+
 	
 }

@@ -168,10 +168,10 @@ class McqController extends Controller
 		//--------------------------
 		
 		$m=1;$n=1;
+	
+		//$mr=Subject::where('id',$subid)->first();
 		
-		//$mr=Course::select('courses.*')->whereIn('id',McqQuestionPaper::select(['course_id'])->where('id',$qpid))->first();
-		
-		$mr=Subject::where('id',$subid)->first();
+		$mr=McqQuestionPaper::where('id',$qpid)->first();
 		if(!empty($mr)){$m=$mr->question_mark; $n=$mr->negative_mark;}
 				
 			$mark=$answer*$m;

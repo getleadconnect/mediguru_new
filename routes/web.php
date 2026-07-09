@@ -344,6 +344,7 @@ Route::get('/change_package_subjects/{pid}/{sids}', [Admin\PackageController::cl
 Route::resource('/payments', Admin\PackagePaymentController::class);
 Route::get('/view_payments', [Admin\PackagePaymentController::class,'view_data']);
 Route::get('/delete_payment/{id}', [Admin\PackagePaymentController::class,'destroy']);
+Route::get('/export_payments', [Admin\PackagePaymentController::class,'export']);
 
 //Students
 
@@ -373,6 +374,7 @@ Route::post('/import_student_users', [Admin\StudentController::class,'import_stu
 
 Route::resource('/subscriptions', Admin\SubscriptionController::class);
 Route::get('/view_subscriptions', [Admin\SubscriptionController::class,'view_data']);
+Route::get('/export_subscriptions', [Admin\SubscriptionController::class,'export']);
 Route::get('/delete_subscription/{id}', [Admin\SubscriptionController::class,'destroy']);
 
 
