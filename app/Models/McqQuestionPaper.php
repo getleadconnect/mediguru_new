@@ -18,7 +18,7 @@ class McqQuestionPaper extends Model
 	
      protected $fillable = [
      'course_id','unique_id','question_paper_name','question_paper_type','premium','description','instruction','test_time',
-	  'schedule_date','test_date','start_time','start_time_text','question_paper_icon','status',
+	  'schedule_date','test_date','start_time','start_time_text','question_paper_icon','status','question_mark','negative_mark',
     ];
 
     protected $hidden = [

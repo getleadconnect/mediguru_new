@@ -236,6 +236,7 @@ $("#subject_id").change(function()
 		paging     : true,
         pageLength :10,
 		scrollX: true,
+		ordering:false,
 		
 		'pagingType':"simple_numbers",
         'lengthChange': true,

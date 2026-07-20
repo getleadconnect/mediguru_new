@@ -169,6 +169,7 @@ $('input[type="search"]').val('');
 		paging     : true,
         pageLength :10,
 		scrollX: true,
+		ordering:false,
 		
 		language: {
                     searchPlaceholder: 'Search',

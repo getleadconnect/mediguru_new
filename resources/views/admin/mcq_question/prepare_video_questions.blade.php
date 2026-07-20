@@ -300,6 +300,7 @@ $("#video_id").change(function()
 		paging     : true,
         pageLength :10,
 		scrollX: true,
+		ordering:false,
 		
 		language: {
                     searchPlaceholder: 'Search',

@@ -152,7 +152,7 @@ class SubjectController extends Controller
 
 				$udata['stype']=$r->subject_type;
 				$udata['desc']=$r->description;
-				$udata['mark']='● Mark:'.$r->question_mark.'<br>● Neg:'.$r->negative_mark;
+				//$udata['mark']='● Mark:'.$r->question_mark.'<br>● Neg:'.$r->negative_mark;
 								
 				if($r->status==1){
 					$st='<span class="badge badge-success">Active</span>';

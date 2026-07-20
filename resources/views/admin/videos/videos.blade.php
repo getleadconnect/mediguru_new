@@ -227,6 +227,7 @@ $("input[type='search']").closest("form").attr("autocomplete","off");
 		paging     : true,
         pageLength :10,
 		scrollX: true,
+		ordering:false,
 		
 		'pagingType':"simple_numbers",
         'lengthChange': true,

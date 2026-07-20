@@ -820,7 +820,6 @@ public function get_dash_live_mock_tests(Request $request)  //live class for das
 			if(!empty($mr)){$m=$mr->question_mark; $n=$mr->negative_mark;}
 		}*/
 
-
 		$mr=McqQuestionPaper::where('id',$qpid)->first();
 		if(!empty($mr)){$m=$mr->question_mark; $n=$mr->negative_mark;}
 

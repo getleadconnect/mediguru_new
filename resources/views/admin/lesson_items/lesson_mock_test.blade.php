@@ -414,6 +414,7 @@ $("#lesson_icon").change(function() {
 		paging     : true,
         pageLength :10,
 		scrollX: true,
+		ordering:false,
 		
 		language: {
                     searchPlaceholder: 'Search',
@@ -453,6 +454,7 @@ var table1 = $('#datatable2').DataTable({
 		paging     : false,
         pageLength :50,
 		scrollX: true,
+		ordering:false,
 		
 		ajax: {
           url: "get_lesson_mcq_tests",

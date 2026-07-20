@@ -197,6 +197,7 @@ var table = $('#datatable').DataTable({
 		paging     : true,
         pageLength :10,
 		scrollX: true,
+		ordering:false,
 		
 		'pagingType':"simple_numbers",
         'lengthChange': true,
