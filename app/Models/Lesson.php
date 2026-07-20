@@ -103,7 +103,7 @@ class Lesson extends Model   //chapters
 	
 	public function getLessons()
 	{
-		$data=self::select('lessons.*')->orderBy('id','ASC')->get();
+		$data=self::select('lessons.*')->orderBy('lessons.lesson_name','ASC')->get();
 		return $data;
 	}
 	

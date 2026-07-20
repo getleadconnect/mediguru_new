@@ -172,7 +172,8 @@ class Subject extends Model
 	public function getSubjects()
 	{
 		$data=self::select('subjects.*','courses.course_name')
-		->leftJoin('courses','subjects.course_id','courses.id')->orderBy('id','ASC')->get();
+		->leftJoin('courses','subjects.course_id','courses.id')
+		->orderBy('subjects.subject_name','ASC')->get();
 		return $data;
 	}
 	
