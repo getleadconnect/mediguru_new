@@ -176,11 +176,10 @@ class Subject extends Model
 		->orderBy('subjects.subject_name','ASC')->get();
 		return $data;
 	}
-	
-	
+		
 	public function viewSubjects($request)   //adding subject to course
 	{
-		
+
 		$search=$request->search;
 			
 		$dts=self::select('subjects.*')
@@ -212,13 +211,13 @@ class Subject extends Model
 		
 	public function getSubjectsByCourseId($id)
 	{
-		$data=self::where('course_id',$id)->orderBy('id','ASC')->get();
+		$data=self::where('course_id',$id)->orderBy('subjects.subject_name','ASC')->get();
 		return $data;
 	}	
 	
 	public function getSubjectsByCourseUniqueId($id)
 	{
-		$data=self::where('course_unique_id',$id)->orderBy('id','ASC')->get();
+		$data=self::where('course_unique_id',$id)->orderBy('subjects.subject_name','ASC')->get();
 		return $data;
 	}	
 	
@@ -242,11 +241,6 @@ class Subject extends Model
 			Storage::disk('spaces')->delete($fna);  //delete file from the disk
 		return $result;
 	}
-	
-	
-	
-	
-	
 	
 	
 	
